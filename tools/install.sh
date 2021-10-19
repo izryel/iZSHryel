@@ -247,6 +247,8 @@ setup_zshrc() {
     echo "${YELLOW}Found ~/.zshrc.${RESET} ${GREEN}Backing up to ${OLD_ZSHRC}${RESET}"
     mv ~/.zshrc "$OLD_ZSHRC"
   fi
+mkdir ~/.backups
+mkdir ~/.backups/nano
 
   echo "${GREEN}Using the Oh My Zsh template file and adding it to ~/.zshrc.${RESET}"
 
@@ -254,36 +256,17 @@ setup_zshrc() {
 export ZSH=\"$ZSH\"
 " "$ZSH/templates/zshrc.zsh-template" > ~/.zshrc-omztemp
   mv -f ~/.zshrc-omztemp ~/.zshrc
-  echo
-}
-  sed "/^export ZSH=/ c\\
-export ZSH=\"$ZSH\"
 " "$ZSH/templates/alias.zsh-template" > ~/.alias-omztemp
   mv -f ~/.alias-omztemp ~/.alias.zshrc
-  echo
-}
-  sed "/^export ZSH=/ c\\
-export ZSH=\"$ZSH\"
 " "$ZSH/templates/env.zsh-template" > ~/.env-omztemp
   mv -f ~/.env-omztemp ~/.env.zshrc
-  echo
-}
-  sed "/^export ZSH=/ c\\
-export ZSH=\"$ZSH\"
 " "$ZSH/templates/nanorc.zsh-template" > ~/.nanorc-omztemp
   mv -f ~/.nanorc-omztemp ~/.nanorc
-  echo
-}
-mkdir ~/.termux
-mkdir ~/.backups
-mkdir ~/.backups/nano
-  sed "/^export ZSH=/ c\\
-export ZSH=\"$ZSH\"
 " "$ZSH/templates/termux.properties" > ~/.termux.properties-omztemp
   mv -f ~/.termux.properties-omztemp ~/.termux/termux.properties
   echo
 }
-cp -r $ZSH/binary/* $PREFIX/
+#cp -r $ZSH/binary/* $PREFIX/
 setup_shell() {
   # Skip setup if the user wants or stdin is closed (not running interactively).
   if [ "$CHSH" = no ]; then
