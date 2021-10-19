@@ -204,17 +204,17 @@ setup_iZSHryel() {
     exit 1
   fi
 
-  git clone -c core.eol=lf -c core.autocrlf=false \
-    -c fsck.zeroPaddedFilemode=ignore \
-    -c fetch.fsck.zeroPaddedFilemode=ignore \
-    -c receive.fsck.zeroPaddedFilemode=ignore \
-    -c iZSHryel.remote=origin \
-    -c iZSHryel.branch="$BRANCH" \
-    --depth=1 --branch "$BRANCH" "$REMOTE" "$ZSH" || {
-    fmt_error "git clone of iZSHryel repo failed"
-    exit 1
-  }
-
+#  git clone -c core.eol=lf -c core.autocrlf=false \
+#    -c fsck.zeroPaddedFilemode=ignore \
+#    -c fetch.fsck.zeroPaddedFilemode=ignore \
+#    -c receive.fsck.zeroPaddedFilemode=ignore \
+#    -c iZSHryel.remote=origin \
+#    -c iZSHryel.branch="$BRANCH" \
+#    --depth=1 --branch "$BRANCH" "$REMOTE" "$ZSH" || {
+#    fmt_error "git clone of iZSHryel repo failed"
+#    exit 1
+#  }
+git clone https://github.com/izryel/iZSHryel.git ~/.iZSHryel
   echo
 }
 
@@ -247,24 +247,15 @@ setup_zshrc() {
     echo "${YELLOW}Found ~/.zshrc.${RESET} ${GREEN}Backing up to ${OLD_ZSHRC}${RESET}"
     mv ~/.zshrc "$OLD_ZSHRC"
   fi
+mkdir ~/.termux
 mkdir ~/.backups
 mkdir ~/.backups/nano
-
-  echo "${GREEN}Using the Oh My Zsh template file and adding it to ~/.zshrc.${RESET}"
-
-  sed "/^export ZSH=/ c\\
-export ZSH=\"$ZSH\"
-" "$ZSH/templates/zshrc.zsh-template" > ~/.zshrc-omztemp
-  mv -f ~/.zshrc-omztemp ~/.zshrc
-" "$ZSH/templates/alias.zsh-template" > ~/.alias-omztemp
-  mv -f ~/.alias-omztemp ~/.alias.zshrc
-" "$ZSH/templates/env.zsh-template" > ~/.env-omztemp
-  mv -f ~/.env-omztemp ~/.env.zshrc
-" "$ZSH/templates/nanorc.zsh-template" > ~/.nanorc-omztemp
-  mv -f ~/.nanorc-omztemp ~/.nanorc
-" "$ZSH/templates/termux.properties" > ~/.termux.properties-omztemp
-  mv -f ~/.termux.properties-omztemp ~/.termux/termux.properties
-  echo
+export ZSH=$HOME/.iZSHryel
+cp -r $ZSH/templates/zshrc.zsh-template ~/.zshrc
+cp -r $ZSH/templates/alias.zsh-template ~/.alias.zshrc
+cp -r $ZSH/templates/env.zsh-template ~/.env.zshrc
+cp -r $ZSH/templates/nanorc.zsh-template ~/.nanorc
+cp -r $ZSH/templates/termux.properties ~/.termux/termux.properties
 }
 #cp -r $ZSH/binary/* $PREFIX/
 setup_shell() {
