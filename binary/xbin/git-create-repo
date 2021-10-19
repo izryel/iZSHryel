@@ -1,0 +1,29 @@
+#!/data/data/com.termux/files/usr/bin/sh
+if [[ -z "$2" && -z "$GITUSER" ]]; then
+    echo "USAGE: git-create-repo USER REPO"
+    echo "or"
+    echo "USAGE: git-create-repo REPO"
+    echo "    (if '\$GITUSER' has a value)"
+    elif [[ -z "$2" && "$GITUSER" != "" ]]; then
+        USER="$GITUSER"
+        REPO="$1"
+        git init
+        git add *
+        git commit -m first commit
+        git branch -M main
+        git remote add origin https://github.com/$USER/$REPO.git
+        git remote set-url origin git+ssh://git@github.com/$USER/$REPO.git
+        git push -u origin main
+    else
+        USER="$1"
+        REPO="$2"
+        git init
+        git add *
+        git commit -m first commit
+        git branch -M main
+        git remote add origin https://github.com/$USER/$REPO.git
+        git remote set-url origin git+ssh://git@github.com/$USER/$REPO.git
+        git push -u origin main
+fi
+unset REPO
+unset USER

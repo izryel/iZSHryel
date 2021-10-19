@@ -1,0 +1,31 @@
+---- !!!!!!!!!!!!!!!!!!!!!!! ----
+Termux no longer receives updates
+from Google Play Store
+Instead check:
+https://github.com/termux/termux
+---- !!!!!!!!!!!!!!!!!!!!!!! ----
+
+---- Term Keyboard shortcuts ----
+    Ctrl + T:    Open a new terminal
+    Ctrl + 1:    Go one session up
+    Ctrl + 2:    Go one session down
+    Ctrl + N:    Rename a session
+
+---- Nano Keyboard shortcuts ----
+    Ctrl + C:    Cancel
+    Ctrl + X:    Exit
+    Ctrl + S:    Save File
+    Ctrl + I:    Indent
+    Ctrl + W:    Find
+    Ctrl + R:    Replace
+    Alt + R:     Refresh
+    Alt + C:     Copy
+    Alt + X:     Cut
+    Alt + V:     Paste
+    Alt + P:     Record Macro
+    Ctrl + P:    Run Macro
+    Ctrl + Z:    Undo
+    Ctrl + Y:    Redo
+    Ctrl + L:    Comment
+___________________________________
+

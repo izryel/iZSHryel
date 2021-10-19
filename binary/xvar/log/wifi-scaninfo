@@ -1,0 +1,1267 @@
+[
+  {
+    "bssid": "76:ee:2a:98:a2:08",
+    "frequency_mhz": 5220,
+    "rssi": -67,
+    "ssid": "DIRECT-Nexar(5G)-2507d0",
+    "timestamp": 22694618100,
+    "channel_bandwidth_mhz": "40",
+    "center_frequency_mhz": 5230
+  },
+  {
+    "bssid": "98:ed:7e:1a:a1:28",
+    "frequency_mhz": 5785,
+    "rssi": -68,
+    "ssid": "Anchored",
+    "timestamp": 22694617790,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "98:ed:7e:1a:a1:2b",
+    "frequency_mhz": 5785,
+    "rssi": -68,
+    "ssid": "",
+    "timestamp": 22694618482,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "84:16:f9:7c:e3:f0",
+    "frequency_mhz": 2437,
+    "rssi": -73,
+    "ssid": "TP-LINK_E3F0",
+    "timestamp": 22694618029,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "98:ed:7e:1a:a1:26",
+    "frequency_mhz": 5180,
+    "rssi": -74,
+    "ssid": "Anchored",
+    "timestamp": 22694617286,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "98:ed:7e:1a:a1:29",
+    "frequency_mhz": 5180,
+    "rssi": -74,
+    "ssid": "",
+    "timestamp": 22691171505,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "f2:51:a4:0d:2a:c0",
+    "frequency_mhz": 5785,
+    "rssi": -74,
+    "ssid": "XFINITY",
+    "timestamp": 22694617753,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "fc:51:a4:0d:2a:c0",
+    "frequency_mhz": 5785,
+    "rssi": -74,
+    "ssid": "Candoo",
+    "timestamp": 22694617742,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "24:4b:fe:0b:4e:b8",
+    "frequency_mhz": 2452,
+    "rssi": -74,
+    "ssid": "Slow Wifi",
+    "timestamp": 22694617325,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "ae:34:26:e1:88:02",
+    "frequency_mhz": 5745,
+    "rssi": -75,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694617547,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "ce:34:26:e1:88:02",
+    "frequency_mhz": 5745,
+    "rssi": -75,
+    "ssid": "XFINITY",
+    "timestamp": 22694617603,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "66:32:b1:46:bc:f0",
+    "frequency_mhz": 2437,
+    "rssi": -75,
+    "ssid": "",
+    "timestamp": 22690525508,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "9c:34:26:e1:88:02",
+    "frequency_mhz": 5745,
+    "rssi": -75,
+    "ssid": "CenturyLinkED71-5G",
+    "timestamp": 22694618216,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "4a:4b:d4:7b:5b:5f",
+    "frequency_mhz": 5220,
+    "rssi": -76,
+    "ssid": "",
+    "timestamp": 22691486043,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "48:4b:d4:73:5b:5c",
+    "frequency_mhz": 5220,
+    "rssi": -76,
+    "ssid": "straightppl",
+    "timestamp": 22694617490,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "4a:4b:d4:74:5b:5c",
+    "frequency_mhz": 2437,
+    "rssi": -76,
+    "ssid": "",
+    "timestamp": 22690474186,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "ea:51:a4:0d:2a:c0",
+    "frequency_mhz": 5785,
+    "rssi": -77,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694617777,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "74:44:01:7c:cc:d3",
+    "frequency_mhz": 2432,
+    "rssi": -77,
+    "ssid": "Dexter's Lab",
+    "timestamp": 22694617969,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "fa:aa:a0:97:f1:58",
+    "frequency_mhz": 2437,
+    "rssi": -77,
+    "ssid": "",
+    "timestamp": 22690454075,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "06:aa:a0:97:f1:58",
+    "frequency_mhz": 2437,
+    "rssi": -77,
+    "ssid": "",
+    "timestamp": 22690505749,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "30:b5:c2:fb:e9:8a",
+    "frequency_mhz": 2462,
+    "rssi": -77,
+    "ssid": "Troy and Abed in the Modem",
+    "timestamp": 22694618051,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "1a:71:c2:da:c1:28",
+    "frequency_mhz": 2437,
+    "rssi": -77,
+    "ssid": "",
+    "timestamp": 22690490152,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "c6:a5:11:a4:b0:45",
+    "frequency_mhz": 2447,
+    "rssi": -78,
+    "ssid": "",
+    "timestamp": 22690684988,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "da:5d:df:98:55:60",
+    "frequency_mhz": 5745,
+    "rssi": -79,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694617558,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "72:5b:f0:d9:b7:05",
+    "frequency_mhz": 2437,
+    "rssi": -79,
+    "ssid": "",
+    "timestamp": 22690487048,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "de:34:26:e1:88:02",
+    "frequency_mhz": 5745,
+    "rssi": -79,
+    "ssid": "",
+    "timestamp": 22694618239,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "94:e8:c5:fe:eb:9a",
+    "frequency_mhz": 5785,
+    "rssi": -79,
+    "ssid": "XFINITY",
+    "timestamp": 22694618458,
+    "channel_bandwidth_mhz": "40",
+    "center_frequency_mhz": 5795
+  },
+  {
+    "bssid": "16:71:c2:c9:9d:88",
+    "frequency_mhz": 2462,
+    "rssi": -79,
+    "ssid": "",
+    "timestamp": 22691083573,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "72:5b:f0:d9:b7:07",
+    "frequency_mhz": 2437,
+    "rssi": -79,
+    "ssid": "",
+    "timestamp": 22690487582,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "f6:03:2a:df:16:9a",
+    "frequency_mhz": 5805,
+    "rssi": -80,
+    "ssid": "DIRECT-Ug-FireTV_6322",
+    "timestamp": 22694617879,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "d8:97:ba:67:d0:10",
+    "frequency_mhz": 5805,
+    "rssi": -80,
+    "ssid": "QueenSheba-5",
+    "timestamp": 22694617908,
+    "channel_bandwidth_mhz": "40",
+    "center_frequency_mhz": 5795
+  },
+  {
+    "bssid": "de:5d:df:98:55:60",
+    "frequency_mhz": 5745,
+    "rssi": -80,
+    "ssid": "",
+    "timestamp": 22694618300,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "e2:5d:df:98:55:60",
+    "frequency_mhz": 5745,
+    "rssi": -80,
+    "ssid": "XFINITY",
+    "timestamp": 22694617582,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "d4:5d:df:98:55:60",
+    "frequency_mhz": 5745,
+    "rssi": -80,
+    "ssid": "Rosales",
+    "timestamp": 22694617637,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "e6:5d:df:98:55:60",
+    "frequency_mhz": 5745,
+    "rssi": -80,
+    "ssid": "",
+    "timestamp": 22694618228,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "98:de:d0:67:2a:c8",
+    "frequency_mhz": 2462,
+    "rssi": -80,
+    "ssid": "TP-LINK_2AC8",
+    "timestamp": 22694618059,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "94:e8:c5:fe:eb:9c",
+    "frequency_mhz": 5785,
+    "rssi": -80,
+    "ssid": "CableWiFi",
+    "timestamp": 22694617800,
+    "channel_bandwidth_mhz": "40",
+    "center_frequency_mhz": 5795
+  },
+  {
+    "bssid": "84:d8:1b:79:35:57",
+    "frequency_mhz": 2422,
+    "rssi": -80,
+    "ssid": "DripDrip",
+    "timestamp": 22694617960,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "8c:5b:f0:d9:b7:02",
+    "frequency_mhz": 2437,
+    "rssi": -80,
+    "ssid": "Blueground610",
+    "timestamp": 22694617976,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "44:65:7f:b2:9c:75",
+    "frequency_mhz": 2462,
+    "rssi": -81,
+    "ssid": "KingLouisTheShihTzu",
+    "timestamp": 22694618066,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "a0:63:91:8f:5f:e6",
+    "frequency_mhz": 2427,
+    "rssi": -81,
+    "ssid": "NETGEAR02",
+    "timestamp": 22694617400,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "8a:f7:81:41:e6:cd",
+    "frequency_mhz": 5785,
+    "rssi": -82,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694617813,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "60:32:b1:46:bc:ef",
+    "frequency_mhz": 5805,
+    "rssi": -82,
+    "ssid": "kt",
+    "timestamp": 22694617934,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "08:36:c9:99:95:42",
+    "frequency_mhz": 5765,
+    "rssi": -82,
+    "ssid": "NETGEAR61-5G",
+    "timestamp": 22694617661,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "66:32:b1:46:bc:ef",
+    "frequency_mhz": 5805,
+    "rssi": -82,
+    "ssid": "",
+    "timestamp": 22694618627,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "c0:7c:d1:04:31:f8",
+    "frequency_mhz": 2437,
+    "rssi": -82,
+    "ssid": "JeremyBearimy",
+    "timestamp": 22694617991,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "92:f7:81:41:e6:cd",
+    "frequency_mhz": 5785,
+    "rssi": -83,
+    "ssid": "XFINITY",
+    "timestamp": 22694618468,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "be:34:26:e1:88:02",
+    "frequency_mhz": 5745,
+    "rssi": -83,
+    "ssid": "",
+    "timestamp": 22694618290,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "82:85:2a:79:f6:18",
+    "frequency_mhz": 2462,
+    "rssi": -83,
+    "ssid": "",
+    "timestamp": 22691051140,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "c6:7c:d1:04:32:00",
+    "frequency_mhz": 5240,
+    "rssi": -84,
+    "ssid": "",
+    "timestamp": 22691608531,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "18:a6:f7:41:03:4b",
+    "frequency_mhz": 2457,
+    "rssi": -84,
+    "ssid": "Yer a wizard Harry",
+    "timestamp": 22694618039,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "84:16:f9:7c:f6:bc",
+    "frequency_mhz": 2437,
+    "rssi": -84,
+    "ssid": "Corgisaurus Rex",
+    "timestamp": 22694617985,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "d6:7c:d1:04:32:00",
+    "frequency_mhz": 5240,
+    "rssi": -85,
+    "ssid": "XFINITY",
+    "timestamp": 22694617528,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "d2:7c:d1:04:32:00",
+    "frequency_mhz": 5240,
+    "rssi": -85,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694618138,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "fe:aa:a0:97:f1:60",
+    "frequency_mhz": 5200,
+    "rssi": -85,
+    "ssid": "",
+    "timestamp": 22691296574,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "24:4b:fe:0b:4e:bc",
+    "frequency_mhz": 5745,
+    "rssi": -85,
+    "ssid": "Slow Wifi",
+    "timestamp": 22694617626,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "dc:fe:07:b5:86:18",
+    "frequency_mhz": 5180,
+    "rssi": -85,
+    "ssid": "NetoPepeto",
+    "timestamp": 22694617312,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "46:65:7f:b2:77:1d",
+    "frequency_mhz": 5765,
+    "rssi": -85,
+    "ssid": "CenturyLinkE94B-5G",
+    "timestamp": 22694618447,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "0a:71:c2:da:c1:30",
+    "frequency_mhz": 5200,
+    "rssi": -85,
+    "ssid": "",
+    "timestamp": 22691305972,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "02:aa:a0:97:f1:60",
+    "frequency_mhz": 5200,
+    "rssi": -85,
+    "ssid": "",
+    "timestamp": 22691313611,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "ca:7c:d1:04:32:00",
+    "frequency_mhz": 5240,
+    "rssi": -85,
+    "ssid": "",
+    "timestamp": 22694618187,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "e6:fe:07:b5:86:18",
+    "frequency_mhz": 5180,
+    "rssi": -85,
+    "ssid": "",
+    "timestamp": 22691193013,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "9a:9d:5d:d8:ef:d2",
+    "frequency_mhz": 5220,
+    "rssi": -85,
+    "ssid": "",
+    "timestamp": 22691479242,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "7e:85:2a:79:f6:20",
+    "frequency_mhz": 5180,
+    "rssi": -85,
+    "ssid": "XFINITY",
+    "timestamp": 22694617368,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "82:85:2a:79:f6:20",
+    "frequency_mhz": 5180,
+    "rssi": -85,
+    "ssid": "",
+    "timestamp": 22691151231,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "8e:49:62:df:c6:c2",
+    "frequency_mhz": 2437,
+    "rssi": -85,
+    "ssid": "",
+    "timestamp": 22690519234,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "ec:aa:a0:97:f1:60",
+    "frequency_mhz": 5200,
+    "rssi": -86,
+    "ssid": "Hilabode",
+    "timestamp": 22694617336,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "c0:7c:d1:04:32:00",
+    "frequency_mhz": 5240,
+    "rssi": -86,
+    "ssid": "JeremyBearimy",
+    "timestamp": 22694617537,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "0e:71:c2:c9:9d:90",
+    "frequency_mhz": 5200,
+    "rssi": -86,
+    "ssid": "XFINITY",
+    "timestamp": 22694617345,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "98:9d:5d:d0:ef:d7",
+    "frequency_mhz": 5220,
+    "rssi": -86,
+    "ssid": "Deedee",
+    "timestamp": 22694617474,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "30:b5:c2:fb:e9:89",
+    "frequency_mhz": 5180,
+    "rssi": -86,
+    "ssid": "Get Off My LAN",
+    "timestamp": 22694618075,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "7a:85:2a:a7:84:00",
+    "frequency_mhz": 5745,
+    "rssi": -86,
+    "ssid": "",
+    "timestamp": 22694618250,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "f6:aa:a0:97:f1:60",
+    "frequency_mhz": 5200,
+    "rssi": -86,
+    "ssid": "",
+    "timestamp": 22691364844,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "46:77:46:de:8a:d7",
+    "frequency_mhz": 5765,
+    "rssi": -86,
+    "ssid": "CenturyLink022A-5G",
+    "timestamp": 22694618415,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "0e:71:c2:b2:30:68",
+    "frequency_mhz": 2462,
+    "rssi": -86,
+    "ssid": "",
+    "timestamp": 22691075030,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "74:85:2a:79:f6:20",
+    "frequency_mhz": 5180,
+    "rssi": -86,
+    "ssid": "AngelsHome",
+    "timestamp": 22694617377,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "8a:85:2a:79:f6:20",
+    "frequency_mhz": 5180,
+    "rssi": -86,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694618084,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "e2:5d:df:98:55:58",
+    "frequency_mhz": 2462,
+    "rssi": -86,
+    "ssid": "",
+    "timestamp": 22691060159,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "46:77:46:42:68:44",
+    "frequency_mhz": 5240,
+    "rssi": -87,
+    "ssid": "CenturyLink25C2-5G",
+    "timestamp": 22694617505,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "06:71:c2:c9:9d:90",
+    "frequency_mhz": 5200,
+    "rssi": -87,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694617452,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "48:77:46:de:8a:d7",
+    "frequency_mhz": 5765,
+    "rssi": -87,
+    "ssid": "",
+    "timestamp": 22694618405,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "48:77:46:42:6a:f0",
+    "frequency_mhz": 5765,
+    "rssi": -87,
+    "ssid": "",
+    "timestamp": 22694618365,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "48:77:46:42:68:44",
+    "frequency_mhz": 5240,
+    "rssi": -87,
+    "ssid": "",
+    "timestamp": 22691592737,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "d4:b9:2f:83:36:f3",
+    "frequency_mhz": 5785,
+    "rssi": -87,
+    "ssid": "XFINITY",
+    "timestamp": 22694617836,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "6c:ae:f6:f1:26:88",
+    "frequency_mhz": 5805,
+    "rssi": -87,
+    "ssid": "Jeremy Bearimy",
+    "timestamp": 22694617894,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "6c:ae:f6:f1:26:8b",
+    "frequency_mhz": 5805,
+    "rssi": -87,
+    "ssid": "",
+    "timestamp": 22694618640,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "7e:85:2a:a7:84:00",
+    "frequency_mhz": 5745,
+    "rssi": -87,
+    "ssid": "",
+    "timestamp": 22694618271,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "d4:b9:2f:83:36:f4",
+    "frequency_mhz": 5785,
+    "rssi": -87,
+    "ssid": "",
+    "timestamp": 22694618505,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "d4:b9:2f:83:36:ef",
+    "frequency_mhz": 5785,
+    "rssi": -87,
+    "ssid": "Wilsondavenet",
+    "timestamp": 22694617825,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "f2:aa:a0:97:f1:60",
+    "frequency_mhz": 5200,
+    "rssi": -87,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694617387,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "90:9a:4a:47:76:df",
+    "frequency_mhz": 5785,
+    "rssi": -87,
+    "ssid": "CenturyLink2023-5G_EXT",
+    "timestamp": 22694617729,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "44:65:7f:b2:9c:85",
+    "frequency_mhz": 5240,
+    "rssi": -88,
+    "ssid": "",
+    "timestamp": 22694618168,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "6c:ae:f6:e3:4b:08",
+    "frequency_mhz": 5785,
+    "rssi": -88,
+    "ssid": "Anchored",
+    "timestamp": 22694617765,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "d4:b9:2f:83:36:f2",
+    "frequency_mhz": 5785,
+    "rssi": -88,
+    "ssid": "",
+    "timestamp": 22694618529,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "d4:b9:2f:83:36:f1",
+    "frequency_mhz": 5785,
+    "rssi": -88,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694617675,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "46:65:7f:b2:9c:85",
+    "frequency_mhz": 5240,
+    "rssi": -88,
+    "ssid": "CenturyLinkED73-5G",
+    "timestamp": 22694617518,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "46:77:46:42:6a:f0",
+    "frequency_mhz": 5765,
+    "rssi": -88,
+    "ssid": "CenturyLink260E-5G",
+    "timestamp": 22694617647,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "72:32:b1:3e:05:09",
+    "frequency_mhz": 5745,
+    "rssi": -89,
+    "ssid": "",
+    "timestamp": 22694618261,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "00:0d:67:7b:99:dd",
+    "frequency_mhz": 5805,
+    "rssi": -89,
+    "ssid": "XFINITY",
+    "timestamp": 22694618576,
+    "channel_bandwidth_mhz": "40",
+    "center_frequency_mhz": 5795
+  },
+  {
+    "bssid": "f0:2f:74:9d:8f:98",
+    "frequency_mhz": 5745,
+    "rssi": -89,
+    "ssid": "",
+    "timestamp": 22694618280,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "2c:56:dc:85:65:ac",
+    "frequency_mhz": 5785,
+    "rssi": -89,
+    "ssid": "Ex Astris_5G",
+    "timestamp": 22694617688,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "60:32:b1:3e:05:09",
+    "frequency_mhz": 5745,
+    "rssi": -89,
+    "ssid": "TP-Link_050A",
+    "timestamp": 22694617591,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "00:0d:67:7b:99:df",
+    "frequency_mhz": 5805,
+    "rssi": -89,
+    "ssid": "CableWiFi",
+    "timestamp": 22694618614,
+    "channel_bandwidth_mhz": "40",
+    "center_frequency_mhz": 5795
+  },
+  {
+    "bssid": "44:1c:12:3c:b9:b8",
+    "frequency_mhz": 5785,
+    "rssi": -89,
+    "ssid": "",
+    "timestamp": 22694618553,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "7c:8b:ca:b3:ce:37",
+    "frequency_mhz": 5745,
+    "rssi": -89,
+    "ssid": "TP-LINK_CE37_5G",
+    "timestamp": 22694617615,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "84:d8:1b:79:35:56",
+    "frequency_mhz": 5785,
+    "rssi": -89,
+    "ssid": "DripDrip-5G",
+    "timestamp": 22694617712,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "44:65:7f:b2:cb:e0",
+    "frequency_mhz": 5805,
+    "rssi": -89,
+    "ssid": "",
+    "timestamp": 22694618601,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "d8:97:ba:6d:29:48",
+    "frequency_mhz": 5765,
+    "rssi": -89,
+    "ssid": "Yang2020",
+    "timestamp": 22694618379,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "94:6a:77:2b:f6:dd",
+    "frequency_mhz": 5200,
+    "rssi": -89,
+    "ssid": "",
+    "timestamp": 22691300711,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "88:b4:a6:f5:57:cf",
+    "frequency_mhz": 5825,
+    "rssi": -90,
+    "ssid": "DAZIK11-5G",
+    "timestamp": 22694617946,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "44:1c:12:3c:b9:ba",
+    "frequency_mhz": 5785,
+    "rssi": -90,
+    "ssid": "",
+    "timestamp": 22694618517,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "50:0f:80:cf:65:e8",
+    "frequency_mhz": 5220,
+    "rssi": -90,
+    "ssid": "AH!24#bp",
+    "timestamp": 22694618129,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "98:de:d0:67:2a:c7",
+    "frequency_mhz": 5180,
+    "rssi": -90,
+    "ssid": "TP-LINK_2AC7_5G",
+    "timestamp": 22694617418,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "8c:5b:f0:d9:b7:03",
+    "frequency_mhz": 5220,
+    "rssi": -90,
+    "ssid": "Blueground610",
+    "timestamp": 22694618110,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "a8:70:5d:87:30:21",
+    "frequency_mhz": 5220,
+    "rssi": -91,
+    "ssid": "",
+    "timestamp": 22691430661,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "44:1c:12:3c:b9:b9",
+    "frequency_mhz": 5785,
+    "rssi": -91,
+    "ssid": "XFINITY",
+    "timestamp": 22694617848,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "44:1c:12:3c:b9:b7",
+    "frequency_mhz": 5785,
+    "rssi": -91,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694617700,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "46:65:7f:b2:8e:99",
+    "frequency_mhz": 5805,
+    "rssi": -91,
+    "ssid": "CenturyLinkEBE7-5G",
+    "timestamp": 22694617859,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "6c:ae:f6:e3:4b:06",
+    "frequency_mhz": 5180,
+    "rssi": -91,
+    "ssid": "Anchored",
+    "timestamp": 22694617426,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "94:6a:77:2b:f6:da",
+    "frequency_mhz": 5200,
+    "rssi": -91,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694617461,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "c6:be:59:20:3e:46",
+    "frequency_mhz": 5240,
+    "rssi": -91,
+    "ssid": "Dumb_Wifi",
+    "timestamp": 22694618148,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "cc:be:59:20:3e:46",
+    "frequency_mhz": 5240,
+    "rssi": -91,
+    "ssid": "",
+    "timestamp": 22691564587,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "e6:97:ba:6d:29:48",
+    "frequency_mhz": 5765,
+    "rssi": -91,
+    "ssid": "",
+    "timestamp": 22694618320,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "50:0f:80:cf:65:ec",
+    "frequency_mhz": 5220,
+    "rssi": -91,
+    "ssid": "",
+    "timestamp": 22691471118,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "50:0f:80:cf:65:eb",
+    "frequency_mhz": 5220,
+    "rssi": -91,
+    "ssid": "",
+    "timestamp": 22691476256,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "50:0f:80:cf:65:ef",
+    "frequency_mhz": 5220,
+    "rssi": -91,
+    "ssid": "Xy34HH32",
+    "timestamp": 22694618119,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "b0:95:75:ed:ca:bc",
+    "frequency_mhz": 5745,
+    "rssi": -92,
+    "ssid": "Garbage Patch Kids",
+    "timestamp": 22694617571,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "de:97:ba:6d:29:48",
+    "frequency_mhz": 5765,
+    "rssi": -92,
+    "ssid": "",
+    "timestamp": 22694618426,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "46:77:46:42:36:10",
+    "frequency_mhz": 5240,
+    "rssi": -93,
+    "ssid": "CenturyLink202E-5G",
+    "timestamp": 22694618177,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "7e:b0:66:e7:4b:95",
+    "frequency_mhz": 5180,
+    "rssi": -93,
+    "ssid": "",
+    "timestamp": 22691204148,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "00:0d:67:7b:ad:3f",
+    "frequency_mhz": 5765,
+    "rssi": -94,
+    "ssid": "CableWiFi",
+    "timestamp": 22694618436,
+    "channel_bandwidth_mhz": "40",
+    "center_frequency_mhz": 5755
+  },
+  {
+    "bssid": "0e:71:c2:b2:30:70",
+    "frequency_mhz": 5785,
+    "rssi": -94,
+    "ssid": "",
+    "timestamp": 22694618541,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "e0:91:f5:b7:0e:e5",
+    "frequency_mhz": 5520,
+    "rssi": -94,
+    "ssid": "Nintendo5G",
+    "timestamp": 22694618205,
+    "channel_bandwidth_mhz": "40",
+    "center_frequency_mhz": 5510
+  },
+  {
+    "bssid": "46:65:7f:b2:9c:6a",
+    "frequency_mhz": 5765,
+    "rssi": -94,
+    "ssid": "CenturyLinkED70-5G",
+    "timestamp": 22694618393,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "06:71:c2:b2:30:70",
+    "frequency_mhz": 5785,
+    "rssi": -94,
+    "ssid": "",
+    "timestamp": 22694618494,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "44:65:7f:b2:9c:6a",
+    "frequency_mhz": 5765,
+    "rssi": -94,
+    "ssid": "",
+    "timestamp": 22694618348,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "c6:76:8f:48:64:ec",
+    "frequency_mhz": 5805,
+    "rssi": -94,
+    "ssid": "CenturyLink76D8-5G",
+    "timestamp": 22694618588,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "48:77:46:42:36:10",
+    "frequency_mhz": 5240,
+    "rssi": -94,
+    "ssid": "",
+    "timestamp": 22694618157,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "16:4e:5a:ff:09:9f",
+    "frequency_mhz": 5765,
+    "rssi": -94,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694618310,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "ee:97:ba:cd:d4:20",
+    "frequency_mhz": 5240,
+    "rssi": -94,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694618195,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "6e:b0:66:e7:4b:95",
+    "frequency_mhz": 5180,
+    "rssi": -94,
+    "ssid": "xfinitywifi",
+    "timestamp": 22694618092,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5210
+  },
+  {
+    "bssid": "36:4e:5a:ff:09:9f",
+    "frequency_mhz": 5765,
+    "rssi": -94,
+    "ssid": "XFINITY",
+    "timestamp": 22694618332,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "46:65:7f:b2:70:15",
+    "frequency_mhz": 5805,
+    "rssi": -95,
+    "ssid": "CenturyLinkE883-5G",
+    "timestamp": 22694617921,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  },
+  {
+    "bssid": "12:71:c2:b2:30:70",
+    "frequency_mhz": 5785,
+    "rssi": -96,
+    "ssid": "",
+    "timestamp": 22694618565,
+    "channel_bandwidth_mhz": "80",
+    "center_frequency_mhz": 5775
+  }
+]
