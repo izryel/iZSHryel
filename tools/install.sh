@@ -12,11 +12,11 @@
 #   sh install.sh
 #
 # You can tweak the install behavior by setting variables when running the script. For
-# example, to change the path to the Oh My Zsh repository:
+# example, to change the path to the iZSHryel repository:
 #   ZSH=~/.zsh sh install.sh
 #
 # Respects the following environment variables:
-#   ZSH     - path to the Oh My Zsh repository folder (default: $HOME/.iZSHryel)
+#   ZSH     - path to the iZSHryel repository folder (default: $HOME/.iZSHryel)
 #   REPO    - name of the GitHub repo to install from (default: izryel/iZSHryel)
 #   REMOTE  - full remote URL of the git repo to install (default: GitHub via HTTPS)
 #   BRANCH  - branch to check out immediately after install (default: master)
@@ -190,7 +190,7 @@ setup_iZSHryel() {
   # precedence over umasks except for filesystems mounted with option "noacl".
   umask g-w,o-w
 
-  echo "${BLUE}Cloning Oh My Zsh...${RESET}"
+  echo "${BLUE}Cloning iZSHryel...${RESET}"
 
   command_exists git || {
     fmt_error "git is not installed"
@@ -247,9 +247,6 @@ setup_zshrc() {
     echo "${YELLOW}Found ~/.zshrc.${RESET} ${GREEN}Backing up to ${OLD_ZSHRC}${RESET}"
     mv ~/.zshrc "$OLD_ZSHRC"
   fi
-mkdir ~/.termux
-mkdir ~/.backups
-mkdir ~/.backups/nano
 export ZSH=$HOME/.iZSHryel
 cp -r $ZSH/templates/zshrc.zsh-template ~/.zshrc
 cp -r $ZSH/templates/alias.zsh-template ~/.alias.zshrc
@@ -339,22 +336,6 @@ EOF
 
 # shellcheck disable=SC2183  # printf string has more %s than arguments ($RAINBOW expands to multiple arguments)
 print_success() {
-  printf '%s         %s__      %s           %s        %s       %s     %s__   %s\n' $RAINBOW $RESET
-  printf '%s  ____  %s/ /_    %s ____ ___  %s__  __  %s ____  %s_____%s/ /_  %s\n' $RAINBOW $RESET
-  printf '%s / __ \%s/ __ \  %s / __ `__ \%s/ / / / %s /_  / %s/ ___/%s __ \ %s\n' $RAINBOW $RESET
-  printf '%s/ /_/ /%s / / / %s / / / / / /%s /_/ / %s   / /_%s(__  )%s / / / %s\n' $RAINBOW $RESET
-  printf '%s\____/%s_/ /_/ %s /_/ /_/ /_/%s\__, / %s   /___/%s____/%s_/ /_/  %s\n' $RAINBOW $RESET
-  printf '%s    %s        %s           %s /____/ %s       %s     %s          %s....is now installed!%s\n' $RAINBOW $GREEN $RESET
-  printf '\n'
-  printf '\n'
-  printf "%s %s %s\n" "Before you scream ${BOLD}${YELLOW}Oh My Zsh!${RESET} look over the" \
-    "$(fmt_code "$(fmt_link ".zshrc" "file://$HOME/.zshrc" --text)")" \
-    "file to select plugins, themes, and options."
-  printf '\n'
-  printf '%s\n' "• Follow us on Twitter: $(fmt_link @iZSHryel https://twitter.com/iZSHryel)"
-  printf '%s\n' "• Join our Discord community: $(fmt_link "Discord server" https://discord.gg/iZSHryel)"
-  printf '%s\n' "• Get stickers, t-shirts, coffee mugs and more: $(fmt_link "Planet Argon Shop" https://shop.planetargon.com/collections/iZSHryel)"
-  printf '%s\n' $RESET
 }
 
 main() {
@@ -391,7 +372,7 @@ exported. You have 3 options:
 
 1. Unset the ZSH variable when calling the installer:
    $(fmt_code "ZSH= sh install.sh")
-2. Install Oh My Zsh to a directory that doesn't exist yet:
+2. Install iZSHryel to a directory that doesn't exist yet:
    $(fmt_code "ZSH=path/to/new/iZSHryel/folder sh install.sh")
 3. (Caution) If the folder doesn't contain important information,
    you can just remove it with $(fmt_code "rm -r $ZSH")

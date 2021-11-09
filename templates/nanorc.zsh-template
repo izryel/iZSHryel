@@ -2,17 +2,14 @@
 set atblanks
 set autoindent
 set backup
-set backupdir "/data/data/com.termux/files/home/.backups/nano"
 set casesensitive
 set historylog
 set linenumbers
 set locking
-set minibar
 set mouse
-set nonewlines
 set quickblank
 set regexp
-#set saveonexit
+set saveonexit
 set softwrap
 set smarthome
 set tabsize 4
@@ -30,8 +27,6 @@ bind ^I indent all
 bind ^W whereis all
 bind ^R replace all
 bind M-R refresh all
-# bind F3 findnext all
-# bind F4 findprevious all
 bind M-C copy all
 bind M-X cut all
 bind M-V paste all
@@ -39,7 +34,5 @@ bind ^P runmacro all
 bind M-P recordmacro all
 bind ^Z undo all
 bind ^Y redo all
-#bind ^T browser all
-#bind ^M complete all
 bind ^L comment all
 bind ^H help all

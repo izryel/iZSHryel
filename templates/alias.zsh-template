@@ -1,9 +1,8 @@
-
+#alias termuxrc='nano $HOME/.termux/termux.properties'
+alias nanorc='nano $HOME/.nanorc'
 alias aliasrc='nano $HOME/.alias.zshrc;source ~/.alias.zahrc'
 alias envrc='nano $HOME/.env.zshrc;source ~/.env.zshrc'
-alias nanorc='nano $HOME/.nanorc'
-alias termuxrc='nano $HOME/.termux/termux.properties'
 alias zshrc='nano $HOME/.zshrc;source ~/.zshrc'
-alias tail="tail -n 9999999999"
-alias install="apt install -y --assume-mo"
+#alias tail="tail -n 9999999999"
+alias install="apt install -y --assume-yes"
 alias update="apt update"

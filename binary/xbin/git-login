@@ -1,9 +1,0 @@
-#!/data/data/com.termux/files/usr/bin/sh
-if [ -z "$1" ]; then
-    echo git-login USERNAME;
-    else
-        export USERNAME="$1"
-        git config --global user.name "$USERNAME"
-        git config --system user.name "$USERNAME"
-        git config --local user.name "$USERNAME"
-fi

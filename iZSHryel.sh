@@ -147,16 +147,12 @@ unset zcompdump_revision zcompdump_fpath zcompdump_refresh
 # Load all of the config files in ~/oh-my-zsh that end in .zsh
 # TIP: Add files you don't want in git to .gitignore
 for config_file ($ZSH/lib/*.zsh); do
-  custom_config_file="${ZSH_CUSTOM}/lib/${config_file:t}"
-  [ -f "${custom_config_file}" ] && config_file=${custom_config_file}
   source $config_file
 done
 
 # Load all of the plugins that were defined in ~/.zshrc
 for plugin ($plugins); do
-  if [ -f $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh ]; then
-    source $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh
-  elif [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then
+  if [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then
     source $ZSH/plugins/$plugin/$plugin.plugin.zsh
   fi
 done
@@ -169,10 +165,7 @@ unset config_file
 
 # Load the theme
 if [ ! "$ZSH_THEME" = ""  ]; then
-  if [ -f "$ZSH_CUSTOM/$ZSH_THEME.zsh-theme" ]; then
-    source "$ZSH_CUSTOM/$ZSH_THEME.zsh-theme"
-  elif [ -f "$ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme" ]; then
-    source "$ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme"
+    source "$ZSH/themes/default.zsh-theme"
   else
     source "$ZSH/themes/$ZSH_THEME.zsh-theme"
   fi

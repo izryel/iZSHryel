@@ -1,2 +1,0 @@
-#!/data/data/com.termux/files/usr/bin/sh
-apt-get --quiet install -y --assume-yes $(tail $HOME/xvar/log/run-once.log)

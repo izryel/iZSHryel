@@ -1,0 +1,1 @@
+izryel.zsh-theme
