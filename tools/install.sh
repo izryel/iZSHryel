@@ -44,7 +44,7 @@ custom_zsh=${ZSH:+yes}
 ZSH=${ZSH:-~/.iZSHryel}
 REPO=${REPO:-izryel/iZSHryel}
 REMOTE=${REMOTE:-https://github.com/${REPO}.git}
-BRANCH=${BRANCH:-master}
+BRANCH=${BRANCH:-main}
 
 # Other options
 CHSH=${CHSH:-yes}
@@ -182,7 +182,7 @@ setup_color() {
   fi
 }
 
-setup_iZSHryel() {
+setup_ohmyzsh() {
   # Prevent the cloned repository from having insecure permissions. Failing to do
   # so causes compinit() calls to fail with "command not found: compdef" errors
   # for users with insecure umasks (e.g., "002", allowing group writability). Note
@@ -204,17 +204,17 @@ setup_iZSHryel() {
     exit 1
   fi
 
-#  git clone -c core.eol=lf -c core.autocrlf=false \
-#    -c fsck.zeroPaddedFilemode=ignore \
-#    -c fetch.fsck.zeroPaddedFilemode=ignore \
-#    -c receive.fsck.zeroPaddedFilemode=ignore \
-#    -c iZSHryel.remote=origin \
-#    -c iZSHryel.branch="$BRANCH" \
-#    --depth=1 --branch "$BRANCH" "$REMOTE" "$ZSH" || {
-#    fmt_error "git clone of iZSHryel repo failed"
-#    exit 1
-#  }
-git clone https://github.com/izryel/iZSHryel.git ~/.iZSHryel
+  git clone -c core.eol=lf -c core.autocrlf=false \
+    -c fsck.zeroPaddedFilemode=ignore \
+    -c fetch.fsck.zeroPaddedFilemode=ignore \
+    -c receive.fsck.zeroPaddedFilemode=ignore \
+    -c iZSHryel.remote=origin \
+    -c iZSHryel.branch="$BRANCH" \
+    --depth=1 --branch "$BRANCH" "$REMOTE" "$ZSH" || {
+    fmt_error "git clone of iZSHryel repo failed"
+    exit 1
+  }
+
   echo
 }
 
@@ -247,14 +247,33 @@ setup_zshrc() {
     echo "${YELLOW}Found ~/.zshrc.${RESET} ${GREEN}Backing up to ${OLD_ZSHRC}${RESET}"
     mv ~/.zshrc "$OLD_ZSHRC"
   fi
-export ZSH=$HOME/.iZSHryel
-cp -r $ZSH/templates/zshrc.zsh-template ~/.zshrc
-cp -r $ZSH/templates/alias.zsh-template ~/.alias.zshrc
-cp -r $ZSH/templates/env.zsh-template ~/.env.zshrc
-cp -r $ZSH/templates/nanorc.zsh-template ~/.nanorc
-cp -r $ZSH/templates/termux.properties ~/.termux/termux.properties
+
+  echo "${GREEN}Using the iZSHryel template file and adding it to ~/.zshrc.${RESET}"
+
+  sed "/^export ZSH=/ c\\
+export ZSH=\"$ZSH\"
+" "$ZSH/templates/zshrc.zsh-template" > ~/.zshrc-omztemp
+  mv -f ~/.zshrc-omztemp ~/.zshrc
+
+  sed "/^export ZSH=/ c\\
+export ZSH=\"$ZSH\"
+" "$ZSH/templates/env.zsh-template" > ~/.env.zshrc-omztemp
+  mv -f ~/.env.zshrc-omztemp ~/.env.zshrc
+
+  sed "/^export ZSH=/ c\\
+export ZSH=\"$ZSH\"
+" "$ZSH/templates/alias.zsh-template" > ~/.alias.zshrc-omztemp
+  mv -f ~/.alias.zshrc-omztemp ~/.alias.zshrc
+
+  sed "/^export ZSH=/ c\\
+export ZSH=\"$ZSH\"
+" "$ZSH/templates/nanorc.zsh-template" > ~/.nanorc-omztemp
+  mv -f ~/.nanorc-omztemp ~/.nanorc
+
+
+  echo
 }
-#cp -r $ZSH/binary/* $PREFIX/
+
 setup_shell() {
   # Skip setup if the user wants or stdin is closed (not running interactively).
   if [ "$CHSH" = no ]; then
@@ -294,6 +313,10 @@ EOF
   esac
 
   if [ "$termux" != true ]; then
+  sed "/^export ZSH=/ c\\
+export ZSH=\"$ZSH\"
+" "$ZSH/templates/termux.properties" > ~/.termux-omztemp
+  mv -f ~/.termux-omztemp ~/.termux/termux.properties
     # Test for the right location of the "shells" file
     if [ -f /etc/shells ]; then
       shells_file=/etc/shells
@@ -308,7 +331,7 @@ EOF
     # 1. Use the most preceding one based on $PATH, then check that it's in the shells file
     # 2. If that fails, get a zsh path from the shells file, then check it actually exists
     if ! zsh=$(command -v zsh) || ! grep -qx "$zsh" "$shells_file"; then
-      if ! zsh=$(grep '^/.*/zsh$' "$shells_file" | tail -1) || [ ! -f "$zsh" ]; then
+      if ! zsh=$(grep '^/.*/zsh$' "$shells_file" | tail -n 1) || [ ! -f "$zsh" ]; then
         fmt_error "no zsh binary found or not present in '$shells_file'"
         fmt_error "change your default shell manually."
         return
@@ -336,6 +359,14 @@ EOF
 
 # shellcheck disable=SC2183  # printf string has more %s than arguments ($RAINBOW expands to multiple arguments)
 print_success() {
+  printf "%s %s %s\n" "Before you scream ${BOLD}${YELLOW}iZSHryel!${RESET} look over the" \
+    "$(fmt_code "$(fmt_link ".zshrc" "file://$HOME/.zshrc" --text)")" \
+    "file to select plugins, themes, and options."
+  printf '\n'
+  printf '%s\n' "• Follow us on Twitter: $(fmt_link @ohmyzsh https://twitter.com/ohmyzsh)"
+  printf '%s\n' "• Join our Discord community: $(fmt_link "Discord server" https://discord.gg/ohmyzsh)"
+  printf '%s\n' "• Get stickers, t-shirts, coffee mugs and more: $(fmt_link "Planet Argon Shop" https://shop.planetargon.com/collections/iZSHryel)"
+  printf '%s\n' $RESET
 }
 
 main() {
@@ -373,7 +404,7 @@ exported. You have 3 options:
 1. Unset the ZSH variable when calling the installer:
    $(fmt_code "ZSH= sh install.sh")
 2. Install iZSHryel to a directory that doesn't exist yet:
-   $(fmt_code "ZSH=path/to/new/iZSHryel/folder sh install.sh")
+   $(fmt_code "ZSH=path/to/new/ohmyzsh/folder sh install.sh")
 3. (Caution) If the folder doesn't contain important information,
    you can just remove it with $(fmt_code "rm -r $ZSH")
 
@@ -384,7 +415,7 @@ EOF
     exit 1
   fi
 
-  setup_iZSHryel
+  setup_ohmyzsh
   setup_zshrc
   setup_shell
 
