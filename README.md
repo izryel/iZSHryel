@@ -1,43 +1,56 @@
-PERSONAL OHMYZSH MODIFIED CONFIG
+# iZSHryel
+izryels customized config [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+#### My Favorite Install Method:
+```bash
+wget https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh
+bash install.sh
+```
+#### Alternative Methods:
+```bash
+curl https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh | bash
+wget https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh | bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)"
+sh -c "$(wget -qO- https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)"
+sh -c "$(fetch -o - https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)"
+```
+## Installation Modifiers
+#### Custom ZSH PATH:
+````
+VARIABLE=value sh install.sh
+````
 
-curl: 
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)"
-wget: 
-	sh -c "$(wget -qO- https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)"
-fetch: 
-	sh -c "$(fetch -o - https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)"
+Respects the following environment variables, where VARIABLE is:
 
-As an alternative, you can first download the install script and run it afterwards:
-	wget https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh
-	sh install.sh
+`ZSH    - (default: $HOME/.iZSHryel)`
 
-You can tweak the install behavior by setting variables when running the script. For example, to change the path to the iZSHryel repository:
-	ZSH=~/.zsh sh install.sh
+`REPO   - (default: izryel/iZSHryel)`
 
-Respects the following environment variables:
-	ZSH     - path to the iZSHryel repository folder (default: $HOME/.iZSHryel)
-	REPO    - name of the GitHub repo to install from (default: izryel/iZSHryel)
-	REMOTE  - full remote URL of the git repo to install (default: GitHub via HTTPS)
-	BRANCH  - branch to check out immediately after install (default: master)
+`REMOTE - (default: GitHub via HTTPS)`
 
-Other options:
-	CHSH       - 'no' means the installer will not change the default shell (default: yes)
-	RUNZSH     - 'no' means the installer will not run zsh after the install (default: yes)
-	KEEP_ZSHRC - 'yes' means the installer will not replace an existing .zshrc (default: no)
+`BRANCH - (default: master)`
 
-You can also pass some arguments to the install script to set some these options:
-	--skip-chsh: has the same behavior as setting CHSH to 'no'
-	--unattended: sets both CHSH and RUNZSH to 'no'
-	--keep-zshrc: sets KEEP_ZSHRC to 'yes'
-For example:
-	sh install.sh --unattended
-or:
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)" "" --unattended
+`CHSH - (default: yes)`
 
+`RUNZSH - (default: yes)`
 
-Builtin aliases for editting and upon saving instantly resourcing....
+`KEEP_ZSHRC - (default: no)`
 
-aliasrc : edits and reloads the ~/.alias.zshrc
-envrc : edits and reloads the  ~/.env.zshrc
-nanorc : edits and reloads the  ~/.nanorc
-zshrc : edits and reloads the  ~/.zshrc
+#### More modifiers
+`--skip-chsh`
+`--unattended`
+`--keep-zshrc`
+##### For example:
+```bash
+sh install.sh --unattended
+```
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)" "" --unattended
+```
+## RC Aliases
+`aliasrc : edits and reloads the ~/.alias.zshrc`
+
+`envrc : edits and reloads the  ~/.env.zshrc`
+
+`nanorc : edits and reloads the  ~/.nanorc`
+
+`zshrc : edits and reloads the  ~/.zshrc`
