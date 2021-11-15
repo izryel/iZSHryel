@@ -54,3 +54,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/izryel/iZSHryel/master/too
 `nanorc : edits and reloads the  ~/.nanorc`
 
 `zshrc : edits and reloads the  ~/.zshrc`
+
+
+#### webhook
+````bash
+https://trigger.macrodroid.com/2a854c26-bc31-4775-98ed-5de88413db48/ipcam?intCam=0&strMotion=yes
+````
