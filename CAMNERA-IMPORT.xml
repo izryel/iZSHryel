@@ -1,0 +1,1198 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<objects xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>7210</Version>
+  <cameras>
+    <camera id="1" name="CAM1" description="" directory="SSOYB" flipx="false" flipy="false" rotateMode="RotateNoneFlipNone" x="0" y="0" width="510" height="256" resolution="640x360" ptz="-1" ptzentryindex="-1">
+      <settings desktopresizewidth="640" desktopresizeheight="480" resize="false" desktopmouse="false" resizeWidth="480" resizeHeight="0">
+        <sourceindex>0</sourceindex>
+        <videosourcestring>http://192.168.1.29/cgi-bin/snapshot.cgi?chn=0&amp;f=1&amp;u=r&amp;p=r</videosourcestring>
+        <login />
+        <password />
+        <useragent>Mozilla/5.0</useragent>
+        <suppressnoise>false</suppressnoise>
+        <audioport>80</audioport>
+        <audiomodel>NetworkKinect</audiomodel>
+        <audioip>192.168.1.29</audioip>
+        <audiousername />
+        <audiopassword />
+        <usehttp10>false</usehttp10>
+        <active>true</active>
+        <notifyondisconnect>false</notifyondisconnect>
+        <frameinterval>0</frameinterval>
+        <framerate>10</framerate>
+        <smsnumber />
+        <emailaddress />
+        <ffmpeg>NotUsed</ffmpeg>
+        <deleteavi>true</deleteavi>
+        <micpair>-1</micpair>
+        <timestampformatter>FPS: {FPS} {0:G} </timestampformatter>
+        <timestamplocation>1</timestamplocation>
+        <timestampfontsize>10</timestampfontsize>
+        <timestampoffset>0</timestampoffset>
+        <timestampforecolor>255,255,255</timestampforecolor>
+        <timestampbackcolor>70,70,70</timestampbackcolor>
+        <timestampfont>Microsoft Sans Serif, 10px</timestampfont>
+        <timestampshowback>true</timestampshowback>
+        <vlcargs>--rtsp-caching=100</vlcargs>
+        <ptzflipx>false</ptzflipx>
+        <ptzflipy>false</ptzflipy>
+        <ptzrotate90>false</ptzrotate90>
+        <ptzport>80</ptzport>
+        <ptzautotrack>false</ptzautotrack>
+        <ptzautotrackreverse>false</ptzautotrackreverse>
+        <ptzautohome>false</ptzautohome>
+        <ptzchannel>0</ptzchannel>
+        <ptzautohomecommand />
+        <ptzautohomedelay>30</ptzautohomedelay>
+        <ptztimetohome>100</ptztimetohome>
+        <ptzautotrackmode>0</ptzautotrackmode>
+        <ptzpelcoconfig />
+        <maxframerate>15</maxframerate>
+        <maxframeraterecord>15</maxframeraterecord>
+        <reconnectinterval>30</reconnectinterval>
+        <namevaluesettings />
+        <accessgroups />
+        <forcebasic>true</forcebasic>
+        <crossbarindex>0</crossbarindex>
+        <cookies />
+        <bordertimeout>0</bordertimeout>
+        <headers />
+        <analyseduration>2000</analyseduration>
+        <timeout>60000</timeout>
+        <nobuffer>true</nobuffer>
+        <rtspmode>1</rtspmode>
+        <procAmpConfig />
+        <messaging>false</messaging>
+        <directoryIndex>0</directoryIndex>
+        <fillMode>1</fillMode>
+        <order>0</order>
+        <youtube>
+          <public>true</public>
+          <tags>iSpy, Motion Detection, Surveillance</tags>
+          <category>People</category>
+        </youtube>
+        <cloudprovider>
+          <provider />
+          <recordings>false</recordings>
+          <images>false</images>
+          <path>[MEDIATYPE]/[NAME]/</path>
+        </cloudprovider>
+        <tokenconfig>
+          <tokenpath />
+          <tokenpost />
+          <tokenport>80</tokenport>
+        </tokenconfig>
+        <storagemanagement>
+          <enabled>false</enabled>
+          <maxsize>1024</maxsize>
+          <maxage>72</maxage>
+          <archive>false</archive>
+        </storagemanagement>
+        <pip>
+          <enabled>true</enabled>
+          <config />
+        </pip>
+        <onvif>
+          <rtspport>0</rtspport>
+          <timeout>15</timeout>
+        </onvif>
+      </settings>
+      <ftp>
+        <enabled>false</enabled>
+        <server>ftp://</server>
+        <port>21</port>
+        <usepassive>false</usepassive>
+        <rename>false</rename>
+        <ready>true</ready>
+        <filename>mylivecamerafeed.jpg</filename>
+        <interval>10</interval>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <ftpcounter>0</ftpcounter>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <savelocal>false</savelocal>
+        <quality>75</quality>
+        <localfilename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</localfilename>
+      </ftp>
+      <savelocal>
+        <enabled>false</enabled>
+        <filename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</filename>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <quality>75</quality>
+      </savelocal>
+      <detector type="Two Frames" postprocessor="Area Highlighting" nomovementinterval="30" movementinterval="0" nomovementintervalnew="30" movementintervalnew="3" calibrationdelay="5" sensitivity="0" maxsensitivity="75" minsensitivity="25" color="Yellow" keepobjectedges="true" recordondetect="false" recordonalert="true" processframeinterval="2000" minwidth="10" minheight="10" highlight="true">
+        <motionzones>
+          <zone left="38" top="58" width="20" height="25" />
+          <zone left="28" top="54" width="10" height="11" />
+          <zone left="38" top="46" width="12" height="12" />
+        </motionzones>
+      </detector>
+      <recorder bufferseconds="3" inactiverecord="15" minrecordtime="15" maxrecordtime="30" timelapse="0" timelapseframes="0" quality="10" trigger="2,2" />
+      <alerts minimuminterval="10" resetinterval="60" groupname="cam" objectcountalert="1" active="true" mode="movement">
+        <alertoptions>false,false</alertoptions>
+      </alerts>
+      <notifications emailgrabinterval="0" sendemail="false" sendsms="false" sendmms="false" />
+      <alertevents>
+        <entries />
+      </alertevents>
+      <schedule active="false">
+        <entries />
+      </schedule>
+      <ptzschedule active="false" suspend="false">
+        <entries />
+      </ptzschedule>
+    </camera>
+    <camera id="2" name="CAM2" description="" directory="GQDXT" flipx="false" flipy="false" rotateMode="RotateNoneFlipNone" x="512" y="0" width="510" height="256" resolution="640x360" ptz="-1" ptzentryindex="-1" newrecordingcount="33">
+      <settings desktopresizewidth="640" desktopresizeheight="480" resize="false" desktopmouse="false" resizeWidth="640" resizeHeight="0">
+        <sourceindex>0</sourceindex>
+        <videosourcestring>http://192.168.1.29/cgi-bin/snapshot.cgi?chn=1&amp;f=1&amp;u=r&amp;p=r</videosourcestring>
+        <login />
+        <password />
+        <useragent>Mozilla/5.0</useragent>
+        <suppressnoise>false</suppressnoise>
+        <audioport>80</audioport>
+        <audiomodel>None</audiomodel>
+        <audioip />
+        <audiousername />
+        <audiopassword />
+        <usehttp10>false</usehttp10>
+        <active>true</active>
+        <notifyondisconnect>false</notifyondisconnect>
+        <frameinterval>0</frameinterval>
+        <framerate>10</framerate>
+        <smsnumber />
+        <emailaddress />
+        <ffmpeg>NotUsed</ffmpeg>
+        <deleteavi>true</deleteavi>
+        <micpair>-1</micpair>
+        <timestampformatter>FPS: {FPS} {0:G} </timestampformatter>
+        <timestamplocation>1</timestamplocation>
+        <timestampfontsize>10</timestampfontsize>
+        <timestampoffset>0</timestampoffset>
+        <timestampforecolor>255,255,255</timestampforecolor>
+        <timestampbackcolor>70,70,70</timestampbackcolor>
+        <timestampfont>Microsoft Sans Serif, 10px</timestampfont>
+        <timestampshowback>true</timestampshowback>
+        <vlcargs>--rtsp-caching=100</vlcargs>
+        <ptzflipx>false</ptzflipx>
+        <ptzflipy>false</ptzflipy>
+        <ptzrotate90>false</ptzrotate90>
+        <ptzport>80</ptzport>
+        <ptzautotrack>false</ptzautotrack>
+        <ptzautotrackreverse>false</ptzautotrackreverse>
+        <ptzautohome>false</ptzautohome>
+        <ptzchannel>0</ptzchannel>
+        <ptzautohomecommand />
+        <ptzautohomedelay>30</ptzautohomedelay>
+        <ptztimetohome>100</ptztimetohome>
+        <ptzautotrackmode>0</ptzautotrackmode>
+        <ptzpelcoconfig />
+        <maxframerate>15</maxframerate>
+        <maxframeraterecord>10</maxframeraterecord>
+        <reconnectinterval>0</reconnectinterval>
+        <namevaluesettings />
+        <accessgroups />
+        <forcebasic>true</forcebasic>
+        <crossbarindex>0</crossbarindex>
+        <cookies />
+        <bordertimeout>0</bordertimeout>
+        <headers />
+        <analyseduration>2000</analyseduration>
+        <timeout>8000</timeout>
+        <nobuffer>true</nobuffer>
+        <rtspmode>1</rtspmode>
+        <procAmpConfig />
+        <messaging>false</messaging>
+        <directoryIndex>0</directoryIndex>
+        <fillMode>1</fillMode>
+        <order>1</order>
+        <youtube>
+          <public>true</public>
+          <tags>iSpy, Motion Detection, Surveillance</tags>
+          <category>People</category>
+        </youtube>
+        <cloudprovider>
+          <provider />
+          <recordings>false</recordings>
+          <images>false</images>
+          <path>[MEDIATYPE]/[NAME]/</path>
+        </cloudprovider>
+        <tokenconfig>
+          <tokenpath />
+          <tokenpost />
+          <tokenport>80</tokenport>
+        </tokenconfig>
+        <storagemanagement>
+          <enabled>false</enabled>
+          <maxsize>1024</maxsize>
+          <maxage>72</maxage>
+          <archive>false</archive>
+        </storagemanagement>
+        <pip>
+          <enabled>false</enabled>
+          <config />
+        </pip>
+        <onvif>
+          <rtspport>0</rtspport>
+          <timeout>15</timeout>
+        </onvif>
+      </settings>
+      <ftp>
+        <enabled>false</enabled>
+        <server>ftp://</server>
+        <port>21</port>
+        <usepassive>false</usepassive>
+        <rename>false</rename>
+        <ready>true</ready>
+        <filename>mylivecamerafeed.jpg</filename>
+        <interval>10</interval>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <ftpcounter>0</ftpcounter>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <savelocal>false</savelocal>
+        <quality>75</quality>
+        <localfilename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</localfilename>
+      </ftp>
+      <savelocal>
+        <enabled>false</enabled>
+        <filename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</filename>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <quality>75</quality>
+      </savelocal>
+      <detector type="None" postprocessor="Area Highlighting" nomovementinterval="30" movementinterval="0" nomovementintervalnew="30" movementintervalnew="3" calibrationdelay="0" sensitivity="0" maxsensitivity="75" minsensitivity="25" color="Yellow" keepobjectedges="true" recordondetect="false" recordonalert="false" processframeinterval="2000" minwidth="10" minheight="10" highlight="true">
+        <motionzones />
+      </detector>
+      <recorder bufferseconds="3" inactiverecord="15" minrecordtime="15" maxrecordtime="30" timelapse="0" timelapseframes="0" quality="10" />
+      <alerts minimuminterval="180" objectcountalert="1" active="false" mode="movement">
+        <alertoptions>false,false</alertoptions>
+      </alerts>
+      <notifications emailgrabinterval="0" sendemail="false" sendsms="false" sendmms="false" />
+      <alertevents>
+        <entries />
+      </alertevents>
+      <schedule active="false">
+        <entries />
+      </schedule>
+      <ptzschedule active="false" suspend="false">
+        <entries />
+      </ptzschedule>
+    </camera>
+    <camera id="3" name="CAM3" description="" directory="PYLFR" flipx="false" flipy="false" rotateMode="RotateNoneFlipNone" x="1024" y="0" width="510" height="256" resolution="640x360" ptz="-1" ptzentryindex="-1" newrecordingcount="21">
+      <settings desktopresizewidth="640" desktopresizeheight="480" resize="false" desktopmouse="false" resizeWidth="640" resizeHeight="0">
+        <sourceindex>0</sourceindex>
+        <videosourcestring>http://192.168.1.29/cgi-bin/snapshot.cgi?chn=2&amp;f=1&amp;u=r&amp;p=r</videosourcestring>
+        <login />
+        <password />
+        <useragent>Mozilla/5.0</useragent>
+        <suppressnoise>false</suppressnoise>
+        <audioport>80</audioport>
+        <audiomodel>None</audiomodel>
+        <audioip />
+        <audiousername />
+        <audiopassword />
+        <usehttp10>false</usehttp10>
+        <active>true</active>
+        <notifyondisconnect>false</notifyondisconnect>
+        <frameinterval>0</frameinterval>
+        <framerate>10</framerate>
+        <smsnumber />
+        <emailaddress />
+        <ffmpeg>NotUsed</ffmpeg>
+        <deleteavi>true</deleteavi>
+        <micpair>-1</micpair>
+        <timestampformatter>FPS: {FPS} {0:G} </timestampformatter>
+        <timestamplocation>1</timestamplocation>
+        <timestampfontsize>10</timestampfontsize>
+        <timestampoffset>0</timestampoffset>
+        <timestampforecolor>255,255,255</timestampforecolor>
+        <timestampbackcolor>70,70,70</timestampbackcolor>
+        <timestampfont>Microsoft Sans Serif, 10px</timestampfont>
+        <timestampshowback>true</timestampshowback>
+        <vlcargs>--rtsp-caching=100</vlcargs>
+        <ptzflipx>false</ptzflipx>
+        <ptzflipy>false</ptzflipy>
+        <ptzrotate90>false</ptzrotate90>
+        <ptzport>80</ptzport>
+        <ptzautotrack>false</ptzautotrack>
+        <ptzautotrackreverse>false</ptzautotrackreverse>
+        <ptzautohome>false</ptzautohome>
+        <ptzchannel>0</ptzchannel>
+        <ptzautohomecommand />
+        <ptzautohomedelay>30</ptzautohomedelay>
+        <ptztimetohome>100</ptztimetohome>
+        <ptzautotrackmode>0</ptzautotrackmode>
+        <ptzpelcoconfig />
+        <maxframerate>15</maxframerate>
+        <maxframeraterecord>15</maxframeraterecord>
+        <reconnectinterval>0</reconnectinterval>
+        <namevaluesettings />
+        <accessgroups />
+        <forcebasic>true</forcebasic>
+        <crossbarindex>0</crossbarindex>
+        <cookies />
+        <bordertimeout>0</bordertimeout>
+        <headers />
+        <analyseduration>2000</analyseduration>
+        <timeout>8000</timeout>
+        <nobuffer>true</nobuffer>
+        <rtspmode>1</rtspmode>
+        <procAmpConfig />
+        <messaging>false</messaging>
+        <directoryIndex>0</directoryIndex>
+        <fillMode>1</fillMode>
+        <order>2</order>
+        <youtube>
+          <public>true</public>
+          <tags>iSpy, Motion Detection, Surveillance</tags>
+          <category>People</category>
+        </youtube>
+        <cloudprovider>
+          <provider />
+          <recordings>false</recordings>
+          <images>false</images>
+          <path>[MEDIATYPE]/[NAME]/</path>
+        </cloudprovider>
+        <tokenconfig>
+          <tokenpath />
+          <tokenpost />
+          <tokenport>80</tokenport>
+        </tokenconfig>
+        <storagemanagement>
+          <enabled>false</enabled>
+          <maxsize>1024</maxsize>
+          <maxage>72</maxage>
+          <archive>false</archive>
+        </storagemanagement>
+        <pip>
+          <enabled>false</enabled>
+          <config />
+        </pip>
+        <onvif>
+          <rtspport>0</rtspport>
+          <timeout>15</timeout>
+        </onvif>
+      </settings>
+      <ftp>
+        <enabled>false</enabled>
+        <server>ftp://</server>
+        <port>21</port>
+        <usepassive>false</usepassive>
+        <rename>false</rename>
+        <ready>true</ready>
+        <filename>mylivecamerafeed.jpg</filename>
+        <interval>10</interval>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <ftpcounter>0</ftpcounter>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <savelocal>false</savelocal>
+        <quality>75</quality>
+        <localfilename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</localfilename>
+      </ftp>
+      <savelocal>
+        <enabled>false</enabled>
+        <filename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</filename>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <quality>75</quality>
+      </savelocal>
+      <detector type="Two Frames" postprocessor="Area Highlighting" nomovementinterval="30" movementinterval="0" nomovementintervalnew="30" movementintervalnew="3" calibrationdelay="0" sensitivity="0" maxsensitivity="75" minsensitivity="25" color="Yellow" keepobjectedges="true" recordondetect="false" recordonalert="true" processframeinterval="2000" minwidth="10" minheight="10" highlight="true">
+        <motionzones>
+          <zone left="16" top="38" width="17" height="34" />
+          <zone left="33" top="52" width="14" height="46" />
+          <zone left="49" top="64" width="14" height="68" />
+        </motionzones>
+      </detector>
+      <recorder bufferseconds="3" inactiverecord="15" minrecordtime="15" maxrecordtime="30" timelapse="0" timelapseframes="0" quality="10" />
+      <alerts minimuminterval="180" objectcountalert="1" active="true" mode="movement">
+        <alertoptions>false,false</alertoptions>
+      </alerts>
+      <notifications emailgrabinterval="0" sendemail="false" sendsms="false" sendmms="false" />
+      <alertevents>
+        <entries />
+      </alertevents>
+      <schedule active="false">
+        <entries />
+      </schedule>
+      <ptzschedule active="false" suspend="false">
+        <entries />
+      </ptzschedule>
+    </camera>
+    <camera id="4" name="CAM4" description="" directory="PSIGC" flipx="false" flipy="false" rotateMode="RotateNoneFlipNone" x="0" y="258" width="510" height="256" resolution="640x360" ptz="-1" ptzentryindex="-1" newrecordingcount="5">
+      <settings desktopresizewidth="640" desktopresizeheight="480" resize="false" desktopmouse="false" resizeWidth="640" resizeHeight="0">
+        <sourceindex>0</sourceindex>
+        <videosourcestring>http://192.168.1.29/cgi-bin/snapshot.cgi?chn=3&amp;f=1&amp;u=r&amp;p=r</videosourcestring>
+        <login />
+        <password />
+        <useragent>Mozilla/5.0</useragent>
+        <suppressnoise>true</suppressnoise>
+        <audioport>80</audioport>
+        <audiomodel>None</audiomodel>
+        <audioip />
+        <audiousername />
+        <audiopassword />
+        <usehttp10>false</usehttp10>
+        <active>true</active>
+        <notifyondisconnect>false</notifyondisconnect>
+        <frameinterval>0</frameinterval>
+        <framerate>10</framerate>
+        <smsnumber />
+        <emailaddress />
+        <ffmpeg>NotUsed</ffmpeg>
+        <deleteavi>true</deleteavi>
+        <micpair>-1</micpair>
+        <timestampformatter>FPS: {FPS} {0:G} </timestampformatter>
+        <timestamplocation>1</timestamplocation>
+        <timestampfontsize>10</timestampfontsize>
+        <timestampoffset>0</timestampoffset>
+        <timestampforecolor>255,255,255</timestampforecolor>
+        <timestampbackcolor>70,70,70</timestampbackcolor>
+        <timestampfont>Microsoft Sans Serif, 10px</timestampfont>
+        <timestampshowback>true</timestampshowback>
+        <vlcargs>--rtsp-caching=100</vlcargs>
+        <ptzflipx>false</ptzflipx>
+        <ptzflipy>false</ptzflipy>
+        <ptzrotate90>false</ptzrotate90>
+        <ptzport>80</ptzport>
+        <ptzautotrack>false</ptzautotrack>
+        <ptzautotrackreverse>false</ptzautotrackreverse>
+        <ptzautohome>false</ptzautohome>
+        <ptzchannel>0</ptzchannel>
+        <ptzautohomecommand />
+        <ptzautohomedelay>30</ptzautohomedelay>
+        <ptztimetohome>100</ptztimetohome>
+        <ptzautotrackmode>0</ptzautotrackmode>
+        <ptzpelcoconfig />
+        <maxframerate>15</maxframerate>
+        <maxframeraterecord>15</maxframeraterecord>
+        <reconnectinterval>0</reconnectinterval>
+        <namevaluesettings />
+        <accessgroups />
+        <forcebasic>true</forcebasic>
+        <crossbarindex>0</crossbarindex>
+        <cookies />
+        <bordertimeout>0</bordertimeout>
+        <headers />
+        <analyseduration>2000</analyseduration>
+        <timeout>8000</timeout>
+        <nobuffer>true</nobuffer>
+        <rtspmode>1</rtspmode>
+        <procAmpConfig />
+        <messaging>false</messaging>
+        <directoryIndex>0</directoryIndex>
+        <fillMode>1</fillMode>
+        <order>3</order>
+        <youtube>
+          <public>true</public>
+          <tags>iSpy, Motion Detection, Surveillance</tags>
+          <category>People</category>
+        </youtube>
+        <cloudprovider>
+          <provider />
+          <recordings>false</recordings>
+          <images>false</images>
+          <path>[MEDIATYPE]/[NAME]/</path>
+        </cloudprovider>
+        <tokenconfig>
+          <tokenpath />
+          <tokenpost />
+          <tokenport>80</tokenport>
+        </tokenconfig>
+        <storagemanagement>
+          <enabled>false</enabled>
+          <maxsize>1024</maxsize>
+          <maxage>72</maxage>
+          <archive>false</archive>
+        </storagemanagement>
+        <pip>
+          <enabled>false</enabled>
+          <config />
+        </pip>
+        <onvif>
+          <rtspport>0</rtspport>
+          <timeout>15</timeout>
+        </onvif>
+      </settings>
+      <ftp>
+        <enabled>false</enabled>
+        <server>ftp://</server>
+        <port>21</port>
+        <usepassive>false</usepassive>
+        <rename>false</rename>
+        <ready>true</ready>
+        <filename>mylivecamerafeed.jpg</filename>
+        <interval>10</interval>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <ftpcounter>0</ftpcounter>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <savelocal>false</savelocal>
+        <quality>75</quality>
+        <localfilename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</localfilename>
+      </ftp>
+      <savelocal>
+        <enabled>false</enabled>
+        <filename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</filename>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <quality>75</quality>
+      </savelocal>
+      <detector type="None" postprocessor="Area Highlighting" nomovementinterval="30" movementinterval="0" nomovementintervalnew="30" movementintervalnew="3" calibrationdelay="0" sensitivity="0" maxsensitivity="75" minsensitivity="25" color="Yellow" keepobjectedges="true" recordondetect="false" recordonalert="false" processframeinterval="2000" minwidth="10" minheight="10" highlight="true" colourprocessing="0|359|0|0.000|1.000|0.000|0.000|1.000|0.000|0|true|true|true" colourprocessingenabled="true">
+        <motionzones />
+      </detector>
+      <recorder bufferseconds="3" inactiverecord="15" minrecordtime="15" maxrecordtime="30" timelapse="0" timelapseframes="0" quality="10" />
+      <alerts minimuminterval="180" objectcountalert="1" active="true" mode="movement">
+        <alertoptions>false,false</alertoptions>
+      </alerts>
+      <notifications emailgrabinterval="0" sendemail="false" sendsms="false" sendmms="false" />
+      <alertevents>
+        <entries />
+      </alertevents>
+      <schedule active="false">
+        <entries />
+      </schedule>
+      <ptzschedule active="false" suspend="false">
+        <entries />
+      </ptzschedule>
+    </camera>
+    <camera id="5" name="CAM5" description="" directory="SCDSM" flipx="false" flipy="false" rotateMode="RotateNoneFlipNone" x="512" y="258" width="510" height="256" resolution="640x360" ptz="-1" ptzentryindex="-1" newrecordingcount="52">
+      <settings desktopresizewidth="640" desktopresizeheight="480" resize="true" desktopmouse="false" resizeWidth="640" resizeHeight="0">
+        <sourceindex>0</sourceindex>
+        <videosourcestring>http://192.168.1.29/cgi-bin/snapshot.cgi?chn=4&amp;f=1&amp;u=r&amp;p=r</videosourcestring>
+        <login />
+        <password />
+        <useragent>Mozilla/5.0</useragent>
+        <suppressnoise>true</suppressnoise>
+        <audioport>80</audioport>
+        <audiomodel>None</audiomodel>
+        <audioip />
+        <audiousername />
+        <audiopassword />
+        <usehttp10>false</usehttp10>
+        <active>true</active>
+        <notifyondisconnect>false</notifyondisconnect>
+        <frameinterval>0</frameinterval>
+        <framerate>10</framerate>
+        <smsnumber />
+        <emailaddress />
+        <ffmpeg>NotUsed</ffmpeg>
+        <deleteavi>true</deleteavi>
+        <micpair>-1</micpair>
+        <timestampformatter>FPS: {FPS} {0:G} </timestampformatter>
+        <timestamplocation>1</timestamplocation>
+        <timestampfontsize>10</timestampfontsize>
+        <timestampoffset>0</timestampoffset>
+        <timestampforecolor>255,255,255</timestampforecolor>
+        <timestampbackcolor>70,70,70</timestampbackcolor>
+        <timestampfont>Microsoft Sans Serif, 10px</timestampfont>
+        <timestampshowback>true</timestampshowback>
+        <vlcargs>--rtsp-caching=100</vlcargs>
+        <ptzflipx>false</ptzflipx>
+        <ptzflipy>false</ptzflipy>
+        <ptzrotate90>false</ptzrotate90>
+        <ptzport>80</ptzport>
+        <ptzautotrack>false</ptzautotrack>
+        <ptzautotrackreverse>false</ptzautotrackreverse>
+        <ptzautohome>false</ptzautohome>
+        <ptzchannel>0</ptzchannel>
+        <ptzautohomecommand />
+        <ptzautohomedelay>30</ptzautohomedelay>
+        <ptztimetohome>100</ptztimetohome>
+        <ptzautotrackmode>0</ptzautotrackmode>
+        <ptzpelcoconfig />
+        <maxframerate>15</maxframerate>
+        <maxframeraterecord>15</maxframeraterecord>
+        <reconnectinterval>0</reconnectinterval>
+        <namevaluesettings />
+        <accessgroups />
+        <forcebasic>true</forcebasic>
+        <crossbarindex>0</crossbarindex>
+        <cookies />
+        <bordertimeout>0</bordertimeout>
+        <headers />
+        <analyseduration>2000</analyseduration>
+        <timeout>8000</timeout>
+        <nobuffer>true</nobuffer>
+        <rtspmode>1</rtspmode>
+        <procAmpConfig />
+        <messaging>true</messaging>
+        <directoryIndex>0</directoryIndex>
+        <fillMode>1</fillMode>
+        <order>4</order>
+        <youtube>
+          <public>true</public>
+          <tags>iSpy, Motion Detection, Surveillance</tags>
+          <category>People</category>
+        </youtube>
+        <cloudprovider>
+          <provider />
+          <recordings>false</recordings>
+          <images>false</images>
+          <path>[MEDIATYPE]/[NAME]/</path>
+        </cloudprovider>
+        <tokenconfig>
+          <tokenpath />
+          <tokenpost />
+          <tokenport>80</tokenport>
+        </tokenconfig>
+        <storagemanagement>
+          <enabled>false</enabled>
+          <maxsize>1024</maxsize>
+          <maxage>72</maxage>
+          <archive>false</archive>
+        </storagemanagement>
+        <pip>
+          <enabled>false</enabled>
+          <config />
+        </pip>
+        <onvif>
+          <rtspport>0</rtspport>
+          <timeout>15</timeout>
+        </onvif>
+      </settings>
+      <ftp>
+        <enabled>false</enabled>
+        <server>ftp://</server>
+        <port>21</port>
+        <usepassive>false</usepassive>
+        <rename>false</rename>
+        <ready>true</ready>
+        <filename>mylivecamerafeed.jpg</filename>
+        <interval>10</interval>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <ftpcounter>0</ftpcounter>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <savelocal>false</savelocal>
+        <quality>75</quality>
+        <localfilename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</localfilename>
+      </ftp>
+      <savelocal>
+        <enabled>false</enabled>
+        <filename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</filename>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <quality>75</quality>
+      </savelocal>
+      <detector type="Custom Frame (Color)" postprocessor="Area Highlighting" nomovementinterval="30" movementinterval="0" nomovementintervalnew="30" movementintervalnew="3" calibrationdelay="0" sensitivity="0" maxsensitivity="75" minsensitivity="25" color="Yellow" keepobjectedges="true" recordondetect="false" recordonalert="true" processframeinterval="2000" minwidth="10" minheight="10" highlight="true">
+        <motionzones>
+          <zone left="19" top="31" width="59" height="53" />
+        </motionzones>
+      </detector>
+      <recorder bufferseconds="3" inactiverecord="15" minrecordtime="15" maxrecordtime="30" timelapse="0" timelapseframes="0" quality="10" />
+      <alerts minimuminterval="180" objectcountalert="1" active="true" mode="movement">
+        <alertoptions>false,false</alertoptions>
+      </alerts>
+      <notifications emailgrabinterval="0" sendemail="false" sendsms="false" sendmms="false" />
+      <alertevents>
+        <entries />
+      </alertevents>
+      <schedule active="false">
+        <entries />
+      </schedule>
+      <ptzschedule active="false" suspend="false">
+        <entries />
+      </ptzschedule>
+    </camera>
+    <camera id="6" name="CAM6" description="" directory="TFOCC" flipx="false" flipy="false" rotateMode="RotateNoneFlipNone" x="1024" y="258" width="510" height="256" resolution="640x360" ptz="-1" ptzentryindex="-1" newrecordingcount="6">
+      <settings desktopresizewidth="640" desktopresizeheight="480" resize="true" desktopmouse="false" resizeWidth="640" resizeHeight="0">
+        <sourceindex>0</sourceindex>
+        <videosourcestring>http://192.168.1.29/cgi-bin/snapshot.cgi?chn=5&amp;f=1&amp;u=r&amp;p=r</videosourcestring>
+        <login />
+        <password />
+        <useragent>Mozilla/5.0</useragent>
+        <suppressnoise>false</suppressnoise>
+        <audioport>80</audioport>
+        <audiomodel>None</audiomodel>
+        <audioip />
+        <audiousername />
+        <audiopassword />
+        <usehttp10>false</usehttp10>
+        <active>true</active>
+        <notifyondisconnect>false</notifyondisconnect>
+        <frameinterval>0</frameinterval>
+        <framerate>10</framerate>
+        <smsnumber />
+        <emailaddress />
+        <ffmpeg>NotUsed</ffmpeg>
+        <deleteavi>true</deleteavi>
+        <micpair>-1</micpair>
+        <timestampformatter>FPS: {FPS} {0:G} </timestampformatter>
+        <timestamplocation>1</timestamplocation>
+        <timestampfontsize>10</timestampfontsize>
+        <timestampoffset>0</timestampoffset>
+        <timestampforecolor>255,255,255</timestampforecolor>
+        <timestampbackcolor>70,70,70</timestampbackcolor>
+        <timestampfont>Microsoft Sans Serif, 10px</timestampfont>
+        <timestampshowback>true</timestampshowback>
+        <vlcargs>--rtsp-caching=100</vlcargs>
+        <ptzflipx>false</ptzflipx>
+        <ptzflipy>false</ptzflipy>
+        <ptzrotate90>false</ptzrotate90>
+        <ptzport>80</ptzport>
+        <ptzautotrack>false</ptzautotrack>
+        <ptzautotrackreverse>false</ptzautotrackreverse>
+        <ptzautohome>false</ptzautohome>
+        <ptzchannel>0</ptzchannel>
+        <ptzautohomecommand />
+        <ptzautohomedelay>30</ptzautohomedelay>
+        <ptztimetohome>100</ptztimetohome>
+        <ptzautotrackmode>0</ptzautotrackmode>
+        <ptzpelcoconfig />
+        <maxframerate>15</maxframerate>
+        <maxframeraterecord>15</maxframeraterecord>
+        <reconnectinterval>0</reconnectinterval>
+        <namevaluesettings />
+        <accessgroups />
+        <forcebasic>true</forcebasic>
+        <crossbarindex>0</crossbarindex>
+        <cookies />
+        <bordertimeout>0</bordertimeout>
+        <headers />
+        <analyseduration>2000</analyseduration>
+        <timeout>8000</timeout>
+        <nobuffer>true</nobuffer>
+        <rtspmode>1</rtspmode>
+        <procAmpConfig />
+        <messaging>false</messaging>
+        <directoryIndex>0</directoryIndex>
+        <fillMode>1</fillMode>
+        <order>5</order>
+        <youtube>
+          <public>true</public>
+          <tags>iSpy, Motion Detection, Surveillance</tags>
+          <category>People</category>
+        </youtube>
+        <cloudprovider>
+          <provider />
+          <recordings>false</recordings>
+          <images>false</images>
+          <path>[MEDIATYPE]/[NAME]/</path>
+        </cloudprovider>
+        <tokenconfig>
+          <tokenpath />
+          <tokenpost />
+          <tokenport>80</tokenport>
+        </tokenconfig>
+        <storagemanagement>
+          <enabled>false</enabled>
+          <maxsize>1024</maxsize>
+          <maxage>72</maxage>
+          <archive>false</archive>
+        </storagemanagement>
+        <pip>
+          <enabled>false</enabled>
+          <config />
+        </pip>
+        <onvif>
+          <rtspport>0</rtspport>
+          <timeout>15</timeout>
+        </onvif>
+      </settings>
+      <ftp>
+        <enabled>false</enabled>
+        <server>ftp://</server>
+        <port>21</port>
+        <usepassive>false</usepassive>
+        <rename>false</rename>
+        <ready>true</ready>
+        <filename>mylivecamerafeed.jpg</filename>
+        <interval>10</interval>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <ftpcounter>0</ftpcounter>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <savelocal>false</savelocal>
+        <quality>75</quality>
+        <localfilename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</localfilename>
+      </ftp>
+      <savelocal>
+        <enabled>false</enabled>
+        <filename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</filename>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <quality>75</quality>
+      </savelocal>
+      <detector type="None" postprocessor="Area Highlighting" nomovementinterval="30" movementinterval="0" nomovementintervalnew="30" movementintervalnew="3" calibrationdelay="0" sensitivity="0" maxsensitivity="75" minsensitivity="25" color="Yellow" keepobjectedges="true" recordondetect="false" recordonalert="true" processframeinterval="2000" minwidth="10" minheight="10" highlight="true">
+        <motionzones />
+      </detector>
+      <recorder bufferseconds="3" inactiverecord="15" minrecordtime="15" maxrecordtime="30" timelapse="0" timelapseframes="0" quality="10" />
+      <alerts minimuminterval="180" objectcountalert="1" active="false" mode="movement">
+        <alertoptions>false,false</alertoptions>
+      </alerts>
+      <notifications emailgrabinterval="0" sendemail="false" sendsms="false" sendmms="false" />
+      <alertevents>
+        <entries />
+      </alertevents>
+      <schedule active="false">
+        <entries />
+      </schedule>
+      <ptzschedule active="false" suspend="false">
+        <entries />
+      </ptzschedule>
+    </camera>
+    <camera id="7" name="CAM7" description="" directory="CLBIL" flipx="false" flipy="false" rotateMode="RotateNoneFlipNone" x="0" y="515" width="510" height="256" resolution="640x360" ptz="-1" ptzentryindex="-1" newrecordingcount="16">
+      <settings desktopresizewidth="640" desktopresizeheight="480" resize="true" desktopmouse="false" resizeWidth="640" resizeHeight="0">
+        <sourceindex>0</sourceindex>
+        <videosourcestring>http://192.168.1.29/cgi-bin/snapshot.cgi?chn=6&amp;f=1&amp;u=r&amp;p=r</videosourcestring>
+        <login />
+        <password />
+        <useragent>Mozilla/5.0</useragent>
+        <suppressnoise>false</suppressnoise>
+        <audioport>80</audioport>
+        <audiomodel>None</audiomodel>
+        <audioip />
+        <audiousername />
+        <audiopassword />
+        <usehttp10>false</usehttp10>
+        <active>true</active>
+        <notifyondisconnect>false</notifyondisconnect>
+        <frameinterval>0</frameinterval>
+        <framerate>10</framerate>
+        <smsnumber />
+        <emailaddress />
+        <ffmpeg>NotUsed</ffmpeg>
+        <deleteavi>true</deleteavi>
+        <micpair>-1</micpair>
+        <timestampformatter>FPS: {FPS} {0:G} </timestampformatter>
+        <timestamplocation>1</timestamplocation>
+        <timestampfontsize>10</timestampfontsize>
+        <timestampoffset>0</timestampoffset>
+        <timestampforecolor>255,255,255</timestampforecolor>
+        <timestampbackcolor>70,70,70</timestampbackcolor>
+        <timestampfont>Microsoft Sans Serif, 10px</timestampfont>
+        <timestampshowback>true</timestampshowback>
+        <vlcargs>--rtsp-caching=100</vlcargs>
+        <ptzflipx>false</ptzflipx>
+        <ptzflipy>false</ptzflipy>
+        <ptzrotate90>false</ptzrotate90>
+        <ptzport>80</ptzport>
+        <ptzautotrack>false</ptzautotrack>
+        <ptzautotrackreverse>false</ptzautotrackreverse>
+        <ptzautohome>false</ptzautohome>
+        <ptzchannel>0</ptzchannel>
+        <ptzautohomecommand />
+        <ptzautohomedelay>30</ptzautohomedelay>
+        <ptztimetohome>100</ptztimetohome>
+        <ptzautotrackmode>0</ptzautotrackmode>
+        <ptzpelcoconfig />
+        <maxframerate>15</maxframerate>
+        <maxframeraterecord>15</maxframeraterecord>
+        <reconnectinterval>0</reconnectinterval>
+        <namevaluesettings />
+        <accessgroups />
+        <forcebasic>true</forcebasic>
+        <crossbarindex>0</crossbarindex>
+        <cookies />
+        <bordertimeout>0</bordertimeout>
+        <headers />
+        <analyseduration>2000</analyseduration>
+        <timeout>8000</timeout>
+        <nobuffer>true</nobuffer>
+        <rtspmode>1</rtspmode>
+        <procAmpConfig />
+        <messaging>false</messaging>
+        <directoryIndex>0</directoryIndex>
+        <fillMode>1</fillMode>
+        <order>6</order>
+        <youtube>
+          <public>true</public>
+          <tags>iSpy, Motion Detection, Surveillance</tags>
+          <category>People</category>
+        </youtube>
+        <cloudprovider>
+          <provider />
+          <recordings>false</recordings>
+          <images>false</images>
+          <path>[MEDIATYPE]/[NAME]/</path>
+        </cloudprovider>
+        <tokenconfig>
+          <tokenpath />
+          <tokenpost />
+          <tokenport>80</tokenport>
+        </tokenconfig>
+        <storagemanagement>
+          <enabled>false</enabled>
+          <maxsize>1024</maxsize>
+          <maxage>72</maxage>
+          <archive>false</archive>
+        </storagemanagement>
+        <pip>
+          <enabled>false</enabled>
+          <config />
+        </pip>
+        <onvif>
+          <rtspport>0</rtspport>
+          <timeout>15</timeout>
+        </onvif>
+      </settings>
+      <ftp>
+        <enabled>false</enabled>
+        <server>ftp://</server>
+        <port>21</port>
+        <usepassive>false</usepassive>
+        <rename>false</rename>
+        <ready>true</ready>
+        <filename>mylivecamerafeed.jpg</filename>
+        <interval>10</interval>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <ftpcounter>0</ftpcounter>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <savelocal>false</savelocal>
+        <quality>75</quality>
+        <localfilename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</localfilename>
+      </ftp>
+      <savelocal>
+        <enabled>false</enabled>
+        <filename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</filename>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <quality>75</quality>
+      </savelocal>
+      <detector type="None" postprocessor="Area Highlighting" nomovementinterval="30" movementinterval="0" nomovementintervalnew="30" movementintervalnew="3" calibrationdelay="0" sensitivity="0" maxsensitivity="75" minsensitivity="25" color="Yellow" keepobjectedges="true" recordondetect="false" recordonalert="true" processframeinterval="2000" minwidth="10" minheight="10" highlight="true">
+        <motionzones />
+      </detector>
+      <recorder bufferseconds="3" inactiverecord="15" minrecordtime="15" maxrecordtime="30" timelapse="0" timelapseframes="0" quality="10" />
+      <alerts minimuminterval="180" objectcountalert="1" active="false" mode="movement">
+        <alertoptions>false,false</alertoptions>
+      </alerts>
+      <notifications emailgrabinterval="0" sendemail="false" sendsms="false" sendmms="false" />
+      <alertevents>
+        <entries />
+      </alertevents>
+      <schedule active="false">
+        <entries />
+      </schedule>
+      <ptzschedule active="false" suspend="false">
+        <entries />
+      </ptzschedule>
+    </camera>
+    <camera id="8" name="CAM8" description="" directory="PBEGD" flipx="false" flipy="false" rotateMode="RotateNoneFlipNone" x="512" y="515" width="510" height="256" resolution="640x360" ptz="-1" ptzentryindex="-1" newrecordingcount="2">
+      <settings desktopresizewidth="640" desktopresizeheight="480" resize="false" desktopmouse="false" resizeWidth="320" resizeHeight="0">
+        <sourceindex>0</sourceindex>
+        <videosourcestring>http://192.168.1.29/cgi-bin/snapshot.cgi?chn=7&amp;f=1&amp;u=r&amp;p=r</videosourcestring>
+        <login />
+        <password />
+        <useragent>Mozilla/5.0</useragent>
+        <suppressnoise>false</suppressnoise>
+        <audioport>80</audioport>
+        <audiomodel>None</audiomodel>
+        <audioip />
+        <audiousername />
+        <audiopassword />
+        <usehttp10>false</usehttp10>
+        <active>true</active>
+        <notifyondisconnect>false</notifyondisconnect>
+        <frameinterval>0</frameinterval>
+        <framerate>10</framerate>
+        <smsnumber />
+        <emailaddress />
+        <ffmpeg>NotUsed</ffmpeg>
+        <deleteavi>true</deleteavi>
+        <micpair>-1</micpair>
+        <timestampformatter>FPS: {FPS} {0:G} </timestampformatter>
+        <timestamplocation>1</timestamplocation>
+        <timestampfontsize>10</timestampfontsize>
+        <timestampoffset>0</timestampoffset>
+        <timestampforecolor>255,255,255</timestampforecolor>
+        <timestampbackcolor>70,70,70</timestampbackcolor>
+        <timestampfont>Microsoft Sans Serif, 10px</timestampfont>
+        <timestampshowback>true</timestampshowback>
+        <vlcargs>--rtsp-caching=100</vlcargs>
+        <ptzflipx>false</ptzflipx>
+        <ptzflipy>false</ptzflipy>
+        <ptzrotate90>false</ptzrotate90>
+        <ptzport>80</ptzport>
+        <ptzautotrack>false</ptzautotrack>
+        <ptzautotrackreverse>false</ptzautotrackreverse>
+        <ptzautohome>false</ptzautohome>
+        <ptzchannel>0</ptzchannel>
+        <ptzautohomecommand />
+        <ptzautohomedelay>30</ptzautohomedelay>
+        <ptztimetohome>100</ptztimetohome>
+        <ptzautotrackmode>0</ptzautotrackmode>
+        <ptzpelcoconfig />
+        <maxframerate>15</maxframerate>
+        <maxframeraterecord>15</maxframeraterecord>
+        <reconnectinterval>0</reconnectinterval>
+        <namevaluesettings />
+        <accessgroups />
+        <forcebasic>true</forcebasic>
+        <crossbarindex>0</crossbarindex>
+        <cookies />
+        <bordertimeout>0</bordertimeout>
+        <headers />
+        <analyseduration>2000</analyseduration>
+        <timeout>8000</timeout>
+        <nobuffer>true</nobuffer>
+        <rtspmode>1</rtspmode>
+        <procAmpConfig />
+        <messaging>true</messaging>
+        <directoryIndex>0</directoryIndex>
+        <fillMode>1</fillMode>
+        <order>7</order>
+        <youtube>
+          <public>true</public>
+          <tags>iSpy, Motion Detection, Surveillance</tags>
+          <category>People</category>
+        </youtube>
+        <cloudprovider>
+          <provider />
+          <recordings>false</recordings>
+          <images>false</images>
+          <path>[MEDIATYPE]/[NAME]/</path>
+        </cloudprovider>
+        <tokenconfig>
+          <tokenpath />
+          <tokenpost />
+          <tokenport>80</tokenport>
+        </tokenconfig>
+        <storagemanagement>
+          <enabled>false</enabled>
+          <maxsize>1024</maxsize>
+          <maxage>72</maxage>
+          <archive>false</archive>
+        </storagemanagement>
+        <pip>
+          <enabled>false</enabled>
+          <config />
+        </pip>
+        <onvif>
+          <rtspport>0</rtspport>
+          <timeout>15</timeout>
+        </onvif>
+      </settings>
+      <ftp>
+        <enabled>false</enabled>
+        <server>ftp://</server>
+        <port>21</port>
+        <usepassive>false</usepassive>
+        <rename>false</rename>
+        <ready>true</ready>
+        <filename>mylivecamerafeed.jpg</filename>
+        <interval>10</interval>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <ftpcounter>0</ftpcounter>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <savelocal>false</savelocal>
+        <quality>75</quality>
+        <localfilename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</localfilename>
+      </ftp>
+      <savelocal>
+        <enabled>false</enabled>
+        <filename>{0:yyyy-MM-dd_HH-mm-ss_fff}.jpg</filename>
+        <intervalnew>10</intervalnew>
+        <counter>0</counter>
+        <countermax>20</countermax>
+        <minimumdelay>0</minimumdelay>
+        <mode>0</mode>
+        <text>www.ispyconnect.com</text>
+        <quality>75</quality>
+      </savelocal>
+      <detector type="Two Frames" postprocessor="Area Highlighting" nomovementinterval="30" movementinterval="0" nomovementintervalnew="30" movementintervalnew="3" calibrationdelay="0" sensitivity="0" maxsensitivity="75" minsensitivity="25" color="Yellow" keepobjectedges="true" recordondetect="false" recordonalert="true" processframeinterval="2000" minwidth="10" minheight="10" highlight="true">
+        <motionzones />
+      </detector>
+      <recorder bufferseconds="3" inactiverecord="15" minrecordtime="15" maxrecordtime="30" timelapse="0" timelapseframes="0" quality="10" />
+      <alerts minimuminterval="180" objectcountalert="1" active="true" mode="movement">
+        <alertoptions>false,false</alertoptions>
+      </alerts>
+      <notifications emailgrabinterval="0" sendemail="false" sendsms="false" sendmms="false" />
+      <alertevents>
+        <entries />
+      </alertevents>
+      <schedule active="false">
+        <entries />
+      </schedule>
+      <ptzschedule active="false" suspend="false">
+        <entries />
+      </ptzschedule>
+    </camera>
+  </cameras>
+  <microphones />
+  <floorplans />
+  <remotecommands>
+    <command id="0" name="cmd_SwitchAllOn" command="ispy ALLON" />
+    <command id="1" name="cmd_SwitchAllOff" command="ispy ALLOFF" />
+    <command id="2" name="cmd_ApplySchedule" command="ispy APPLYSCHEDULE" />
+    <command id="3" name="cmd_RecordOnDetectAll" command="ispy RECORDONDETECTON" />
+    <command id="4" name="cmd_RecordOnAlertAll" command="ispy RECORDONALERTON" />
+    <command id="5" name="cmd_RecordOffAll" command="ispy RECORDINGOFF" />
+    <command id="8" name="cmd_RecordAll" command="ispy RECORD" />
+    <command id="9" name="cmd_RecordAllStop" command="ispy RECORDSTOP" />
+    <command id="6" name="cmd_AlertsOnAll" command="ispy ALERTON" />
+    <command id="7" name="cmd_AlertsOffAll" command="ispy ALERTOFF" />
+    <command id="10" name="cmd_SnapshotAll" command="ispy SNAPSHOT" />
+  </remotecommands>
+  <schedule>
+    <entries />
+  </schedule>
+  <actions>
+    <entries>
+      <entry type="URL" objecttypeid="2" objectid="1" mode="alert" param1="https://trigger.macrodroid.com/2a854c26-bc31-4775-98ed-5de88413db48/ipcam?intCam=1&amp;strMotion=yes" param2="False" ident="88a1dccf-a49a-45c4-947a-0b704ef8add3" />
+      <entry type="URL" objecttypeid="2" objectid="2" mode="alert" param1="https://trigger.macrodroid.com/2a854c26-bc31-4775-98ed-5de88413db48/ipcam?intCam=1&amp;strMotion=yes" param2="False" ident="b11b0cc0-e895-446a-be5c-31c45a78fcfb" active="false" />
+      <entry type="URL" objecttypeid="2" objectid="3" mode="alert" param1="https://trigger.macrodroid.com/2a854c26-bc31-4775-98ed-5de88413db48/ipcam?intCam=3&amp;strMotion=yes" param2="False" ident="f88703fe-672f-4d0b-8285-078ec8e07b30" active="false" />
+      <entry type="URL" objecttypeid="2" objectid="4" mode="alert" param1="https://trigger.macrodroid.com/2a854c26-bc31-4775-98ed-5de88413db48/ipcam?intCam=1&amp;strMotion=yes" param2="False" ident="998dbb53-a7a2-4aef-85e7-3a52f5251871" active="false" />
+      <entry type="URL" objecttypeid="2" objectid="5" mode="alert" param1="https://trigger.macrodroid.com/2a854c26-bc31-4775-98ed-5de88413db48/ipcam?intCam=1&amp;strMotion=yes" param2="False" ident="69e1df5f-7ff1-4a88-8898-1acb46aeba6b" />
+      <entry type="URL" objecttypeid="2" objectid="6" mode="alert" param1="https://trigger.macrodroid.com/2a854c26-bc31-4775-98ed-5de88413db48/ipcam?intCam=1&amp;strMotion=yes" param2="False" ident="8dcf648f-ead5-4d2d-95a3-91eb982f2fdc" />
+      <entry type="URL" objecttypeid="2" objectid="7" mode="alert" param1="https://trigger.macrodroid.com/2a854c26-bc31-4775-98ed-5de88413db48/ipcam?intCam=1&amp;strMotion=yes" param2="False" ident="46ac5005-fe6d-40ea-9cf3-430a5c50af3f" />
+      <entry type="URL" objecttypeid="2" objectid="8" mode="alert" param1="https://trigger.macrodroid.com/2a854c26-bc31-4775-98ed-5de88413db48/ipcam?intCam=1&amp;strMotion=yes" param2="False" ident="3a0776ce-a694-4678-be0e-ff112ebd534b" />
+    </entries>
+  </actions>
+</objects>
