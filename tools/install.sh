@@ -88,52 +88,42 @@ supports_hyperlinks() {
 		[ "$FORCE_HYPERLINK" != 0 ]
 		return $?
 	fi
-
 	# If stdout is not a tty, it doesn't support hyperlinks
 	is_tty || return 1
-
 	# DomTerm terminal emulator (domterm.org)
 	if [ -n "$DOMTERM" ]; then
 		return 0
 	fi
-
 	# VTE-based terminals above v0.50 (Gnome Terminal, Guake, ROXTerm, etc)
 	if [ -n "$VTE_VERSION" ]; then
 		[ $VTE_VERSION -ge 5000 ]
 		return $?
 	fi
-
 	# If $TERM_PROGRAM is set, these terminals support hyperlinks
 	case "$TERM_PROGRAM" in
 	Hyper|iTerm.app|terminology|WezTerm) return 0 ;;
 	esac
-
 	# kitty supports hyperlinks
 	if [ "$TERM" = xterm-kitty ]; then
 		return 0
 	fi
-
 	# Windows Terminal or Konsole also support hyperlinks
 	if [ -n "$WT_SESSION" ] || [ -n "$KONSOLE_VERSION" ]; then
 		return 0
 	fi
-
 	return 1
 }
-
 fmt_link() {
 	# $1: text, $2: url, $3: fallback mode
 	if supports_hyperlinks; then
 		printf '\033]8;;%s\a%s\033]8;;\a\n' "$2" "$1"
 		return
 	fi
-
 	case "$3" in
 	--text) printf '%s\n' "$1" ;;
 	--url|*) fmt_underline "$2" ;;
 	esac
 }
-
 fmt_underline() {
 	is_tty && printf '\033[4m%s\033[24m\n' "$*" || printf '%s\n' "$*"
 }
@@ -142,11 +132,9 @@ fmt_underline() {
 fmt_code() {
 	is_tty && printf '`\033[2m%s\033[22m`\n' "$*" || printf '`%s`\n' "$*"
 }
-
 fmt_error() {
 	printf '%sError: %s%s\n' "$BOLD$RED" "$*" "$RESET" >&2
 }
-
 setup_color() {
 	# Only use colors if connected to a terminal
 	if is_tty; then
@@ -175,7 +163,6 @@ setup_color() {
 		RESET=""
 	fi
 }
-
 setup_iZSHryel() {
 	# Prevent the cloned repository from having insecure permissions. Failing to do
 	# so causes compinit() calls to fail with "command not found: compdef" errors
@@ -184,18 +171,18 @@ setup_iZSHryel() {
 	# precedence over umasks except for filesystems mounted with option "noacl".
 	umask g-w,o-w
 	echo "${BLUE}Cloning iZSHryel...${RESET}"
-
 	command_exists git || {
-		fmt_error "git is not installed"
-		exit 1
+		apt install git -y
 	}
 	ostype=$(uname)
 	if [ -z "${ostype%CYGWIN*}" ] && git --version | grep -q msysgit; then
-		fmt_error "Windows/MSYS Git is not supported on Cygwin"
-		fmt_error "Make sure the Cygwin git package is installed and is first on the \$PATH"
-		exit 1
+		wget https://raw.githubusercontent.com/izryel/apt-cygwin/master/apt-cyg -O /bin/apt-get
+		ln -sf /bin/apt-get /bin/apt
+		chmod a+x /bin/apt*
+		apt update
+		apt install git -y
+		apt full-upgrade
 	fi
-
 	git clone -c core.eol=lf -c core.autocrlf=false \
 		-c fsck.zeroPaddedFilemode=ignore \
 		-c fetch.fsck.zeroPaddedFilemode=ignore \
@@ -209,11 +196,16 @@ setup_iZSHryel() {
 	echo
 }
 setup_zshrc() {
+	if [ -d /etc/iZSHryel/$(whoami) ]; then
+		rm -rf /etc/iZSHryel/$(whoami)
+		mkdir /etc/iZSHryel/$(whoami)
+	else
+		mkdir /etc/iZSHryel/$(whoami)
+	fi
 	# Keep most recent old .zshrc at .zshrc.pre-iZSHryel, and older ones
 	# with datestamp of installation that moved them aside, so we never actually
 	# destroy a user's original zshrc
 	echo "${BLUE}Looking for an existing zsh config...${RESET}"
-
 	# Must use this exact name so uninstall.sh can find it
 	OLD_ZSHRC=~/.zshrc.pre-iZSHryel
 	if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
