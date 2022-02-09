@@ -1,4 +1,4 @@
-WTw#!/bin/sh
+#!/bin/sh
 #
 # This script should be run via wget:
 #	 sh -c "$(wget -qO- https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)"
@@ -32,19 +32,8 @@ WTw#!/bin/sh
 #	 sh -c "$(wget -qO- https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)" "" --unattended
 #
 set -e
-echo "                             _                                            "
-echo "                             _                                            "
-echo "                             _                                            "
-echo "                             _                                            "
-echo "                             _                                            "
-echo "                             _                                            "
-echo "                             _                                            "
-echo "                             _                                            "
-echo "                             _                                            "
-echo "                             _                                            "
-echo "                             _                                            "
-echo "                             _                                            "
-echo "                             _                                            "
+echo "                                                                          "
+echo "                                                                          "
 echo "                             _                                            "
 echo "                            | |                                           "
 echo "                        __  | |        _  _  _                            "
