@@ -1,59 +1,48 @@
 #!/bin/sh
 #
-# This script should be run via curl:
-#	 sh -c "$(curl -fsSL https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)"
-# or via wget:
+# This script should be run via wget:
 #	 sh -c "$(wget -qO- https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)"
-# or via fetch:
-#	 sh -c "$(fetch -o - https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)"
 #
-# As an alternative, you can first download the install script and run it afterwards:
+# As an alternative, you can first download the install script and run it afterwards with bash:
 #	 wget https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh
-#	 sh install.sh
-#	
+#	 bash install.sh
+#
 # You can tweak the install behavior by setting variables when running the script. For
 # example, to change the path to the iZSHryel repository:
 #	 ZSH=~/.zsh sh install.sh
 #
 # Respects the following environment variables:
-#	 ZSH	- path to the iZSHryel repository folder (default: $HOME/.iZSHryel)
-#	 REPO	- name of the GitHub repo to install from (default: izryel/iZSHryel)
-#	 REMOTE	- full remote URL of the git repo to install (default: GitHub via HTTPS)
-#	 BRANCH	- branch to check out immediately after install (default: master)
+#	 ZSH		- path to the iZSHryel repository folder (default: $HOME/.iZSHryel)
+#	 REPO		- name of the GitHub repo to install from (default: izryel/iZSHryel)
+#	 REMOTE		- full remote URL of the git repo to install (default: GitHub via HTTPS)
+#	 BRANCH		- branch to check out immediately after install (default: master)
 #
 # Other options:
-#	 CHSH			 - 'no' means the installer will not change the default shell (default: yes)
-#	 RUNZSH		 - 'no' means the installer will not run zsh after the install (default: yes)
-#	 KEEP_ZSHRC - 'yes' means the installer will not replace an existing .zshrc (default: no)
+#	 CHSH		- 'no' means the installer will not change the default shell (default: yes)
+#	 RUNZSH		- 'no' means the installer will not run zsh after the install (default: yes)
+#	 KEEP_ZSHRC	- 'yes' means the installer will not replace an existing .zshrc (default: no)
 #
 # You can also pass some arguments to the install script to set some these options:
-#	 --skip-chsh: has the same behavior as setting CHSH to 'no'
-#	 --unattended: sets both CHSH and RUNZSH to 'no'
-#	 --keep-zshrc: sets KEEP_ZSHRC to 'yes'
+#	 --skip-chsh:	- has the same behavior as setting CHSH to 'no'
+#	 --unattended:	- sets both CHSH and RUNZSH to 'no'
+#	 --keep-zshrc:	- sets KEEP_ZSHRC to 'yes'
 # For example:
 #	 sh install.sh --unattended
 # or:
-#	 sh -c "$(curl -fsSL https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)" "" --unattended
+#	 sh -c "$(wget -qO- https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)" "" --unattended
 #
 set -e
-# Track if $ZSH was provided
 custom_zsh=${ZSH:+yes}
-# Default settings
-ZSH=/etc/iZSHryel
+ZSH=${ZSH:-~/.iZSHryel}
 REPO=${REPO:-izryel/iZSHryel}
 REMOTE=${REMOTE:-https://github.com/${REPO}.git}
 BRANCH=${BRANCH:-main}
-# Other options
 CHSH=${CHSH:-yes}
 RUNZSH=${RUNZSH:-yes}
 KEEP_ZSHRC=${KEEP_ZSHRC:-no}
 command_exists() {
 	command -v "$@" >/dev/null 2>&1
 }
-# The [ -t 1 ] check only works when the function is not called from
-# a subshell (like in `$(...)` or `(...)`, so this hack redefines the
-# function at the top level to always return false when stdout is not
-# a tty.
 if [ -t 1 ]; then
 	is_tty() {
 		true
@@ -63,7 +52,6 @@ else
 		false
 	}
 fi
-
 # This function uses the logic from supports-hyperlinks[1][2], which is
 # made by Kat Marchán (@zkat) and licensed under the Apache License 2.0.
 # [1] https://github.com/zkat/supports-hyperlinks
@@ -107,7 +95,6 @@ supports_hyperlinks() {
 	if [ "$TERM" = xterm-kitty ]; then
 		return 0
 	fi
-	# Windows Terminal or Konsole also support hyperlinks
 	if [ -n "$WT_SESSION" ] || [ -n "$KONSOLE_VERSION" ]; then
 		return 0
 	fi
@@ -127,8 +114,6 @@ fmt_link() {
 fmt_underline() {
 	is_tty && printf '\033[4m%s\033[24m\n' "$*" || printf '%s\n' "$*"
 }
-
-# shellcheck disable=SC2016 # backtick in single-quote
 fmt_code() {
 	is_tty && printf '`\033[2m%s\033[22m`\n' "$*" || printf '`%s`\n' "$*"
 }
@@ -136,16 +121,15 @@ fmt_error() {
 	printf '%sError: %s%s\n' "$BOLD$RED" "$*" "$RESET" >&2
 }
 setup_color() {
-	# Only use colors if connected to a terminal
 	if is_tty; then
 		RAINBOW="
-			$(printf '\033[38;5;196m')
-			$(printf '\033[38;5;202m')
-			$(printf '\033[38;5;226m')
-			$(printf '\033[38;5;082m')
-			$(printf '\033[38;5;021m')
-			$(printf '\033[38;5;093m')
-			$(printf '\033[38;5;163m')
+		$(printf '\033[38;5;196m')
+		$(printf '\033[38;5;202m')
+		$(printf '\033[38;5;226m')
+		$(printf '\033[38;5;082m')
+		$(printf '\033[38;5;021m')
+		$(printf '\033[38;5;093m')
+		$(printf '\033[38;5;163m')
 		"
 		RED=$(printf '\033[31m')
 		GREEN=$(printf '\033[32m')
@@ -172,16 +156,14 @@ setup_iZSHryel() {
 	umask g-w,o-w
 	echo "${BLUE}Cloning iZSHryel...${RESET}"
 	command_exists git || {
-		apt install git -y
+		fmt_error "git is not installed"
+		exit 1
 	}
 	ostype=$(uname)
 	if [ -z "${ostype%CYGWIN*}" ] && git --version | grep -q msysgit; then
-		wget https://raw.githubusercontent.com/izryel/apt-cygwin/master/apt-cyg -O /bin/apt-get
-		ln -sf /bin/apt-get /bin/apt
-		chmod a+x /bin/apt*
-		apt update
-		apt install git -y
-		apt full-upgrade
+		fmt_error "Windows/MSYS Git is not supported on Cygwin"
+		fmt_error "Make sure the Cygwin git package is installed and is first on the \$PATH"
+		exit 1
 	fi
 	git clone -c core.eol=lf -c core.autocrlf=false \
 		-c fsck.zeroPaddedFilemode=ignore \
@@ -196,12 +178,6 @@ setup_iZSHryel() {
 	echo
 }
 setup_zshrc() {
-	if [ -d /etc/iZSHryel/$(whoami) ]; then
-		rm -rf /etc/iZSHryel/$(whoami)
-		mkdir /etc/iZSHryel/$(whoami)
-	else
-		mkdir /etc/iZSHryel/$(whoami)
-	fi
 	# Keep most recent old .zshrc at .zshrc.pre-iZSHryel, and older ones
 	# with datestamp of installation that moved them aside, so we never actually
 	# destroy a user's original zshrc
@@ -223,7 +199,7 @@ setup_zshrc() {
 			fi
 			mv "$OLD_ZSHRC" "${OLD_OLD_ZSHRC}"
 			echo "${YELLOW}Found old ~/.zshrc.pre-iZSHryel." \
-			"${GREEN}Backing up to ${OLD_OLD_ZSHRC}${RESET}"
+				"${GREEN}Backing up to ${OLD_OLD_ZSHRC}${RESET}"
 		fi
 		echo "${YELLOW}Found ~/.zshrc.${RESET} ${GREEN}Backing up to ${OLD_ZSHRC}${RESET}"
 		mv ~/.zshrc "$OLD_ZSHRC"
@@ -235,12 +211,16 @@ setup_zshrc() {
 	mv -f ~/.zshrc-omztemp ~/.zshrc
 	sed "/^export ZSH=/ c\\
 	export ZSH=\"$ZSH\"
-	" "$ZSH/templates/env.zsh-template" > ~/.env.zshrc-omztemp
+	" "$ZSH	/templates/env.zsh-template" > ~/.env.zshrc-omztemp
 	mv -f ~/.env.zshrc-omztemp ~/.env.zshrc
 	sed "/^export ZSH=/ c\\
 	export ZSH=\"$ZSH\"
 	" "$ZSH/templates/alias.zsh-template" > ~/.alias.zshrc-omztemp
 	mv -f ~/.alias.zshrc-omztemp ~/.alias.zshrc
+	sed "/^export ZSH=/ c\\
+	export ZSH=\"$ZSH\"
+	" "$ZSH/templates/sudo-alias.zsh-template" > ~/.sudo-alias.zshrc-omztemp
+	mv -f ~/.sudo-alias.zshrc-omztemp ~/.sudo-alias.zshrc
 	sed "/^export ZSH=/ c\\
 	export ZSH=\"$ZSH\"
 	" "$ZSH/templates/nanorc.zsh-template" > ~/.nanorc-omztemp
@@ -279,41 +259,46 @@ EOF
 		*com.termux*) termux=true; zsh=zsh ;;
 		*) termux=false ;;
 	esac
-	if [ "$termux" != false ]; then
-		cp "$ZSH/templates/termux.properties" "$HOME/.termux/termux.properties"
-	fi
-# Test for the right location of the "shells" file
-	if [ -f /etc/shells ]; then
-		shells_file=/etc/shells
-	elif [ -f /usr/share/defaults/etc/shells ]; then # Solus OS
-		shells_file=/usr/share/defaults/etc/shells
-	else
-		fmt_error "could not find /etc/shells file. Change your default shell manually."
-		return
-	fi
-	if ! zsh=$(command -v zsh) || ! grep -qx "$zsh" "$shells_file"; then
-		if ! zsh=$(grep '^/.*/zsh$' "$shells_file" | tail -n 1) || [ ! -f "$zsh" ]; then
-			fmt_error "no zsh binary found or not present in '$shells_file'"
-			fmt_error "change your default shell manually."
+	if [ "$termux" != true ]; then
+		cp -r $ZSH/templates/termux.properties" $HOME/.termux-omztemp
+		mv -f ~/.termux-omztemp ~/.termux/termux.properties
+		# Test for the right location of the "shells" file
+		if [ -f /etc/shells ]; then
+			shells_file=/etc/shells
+		elif [ -f /usr/share/defaults/etc/shells ]; then # Solus OS
+			shells_file=/usr/share/defaults/etc/shells
+		else
+			fmt_error "could not find /etc/shells file. Change your default shell manually."
 			return
 		fi
+		# Get the path to the right zsh binary
+		# 1. Use the most preceding one based on $PATH, then check that it's in the shells file
+		# 2. If that fails, get a zsh path from the shells file, then check it actually exists
+		if ! zsh=$(command -v zsh) || ! grep -qx "$zsh" "$shells_file"; then
+			if ! zsh=$(grep '^/.*/zsh$' "$shells_file" | tail -n 1) || [ ! -f "$zsh" ]; then
+				fmt_error "no zsh binary found or not present in '$shells_file'"
+				fmt_error "change your default shell manually."
+				return
+			fi
+		fi
 	fi
+	# We're going to change the default shell, so back up the current one
 	if [ -n "$SHELL" ]; then
 		echo "$SHELL" > ~/.shell.pre-iZSHryel
 	else
 		grep "^$USERNAME:" /etc/passwd | awk -F: '{print $7}' > ~/.shell.pre-iZSHryel
 	fi
+	# Actually change the default shell to zsh
 	if ! chsh -s "$zsh"; then
 		fmt_error "chsh command unsuccessful. Change your default shell manually."
 	else
 		export SHELL="$zsh"
 		echo "${GREEN}Shell successfully changed to '$zsh'.${RESET}"
 	fi
-		echo
-	}
-	#shellcheck disable=SC2183	
-	#printf string has more %s than arguments ($RAINBOW expands to multiple arguments)
-	print_success() {
+	echo
+}
+# shellcheck disable=SC2183	# printf string has more %s than arguments ($RAINBOW expands to multiple arguments)
+print_success() {
 	printf "%s %s %s\n" "Before you scream ${BOLD}${YELLOW}iZSHryel!${RESET} look over the" \
 		"$(fmt_code "$(fmt_link ".zshrc" "file://$HOME/.zshrc" --text)")" \
 		"file to select plugins, themes, and options."
@@ -324,10 +309,12 @@ EOF
 	printf '%s\n' $RESET
 }
 main() {
+	# Run as unattended if stdin is not a tty
 	if [ ! -t 0 ]; then
 		RUNZSH=no
 		CHSH=no
 	fi
+	# Parse arguments
 	while [ $# -gt 0 ]; do
 		case $1 in
 			--unattended) RUNZSH=no; CHSH=no ;;
@@ -338,23 +325,21 @@ main() {
 	done
 	setup_color
 	if ! command_exists zsh; then
-		apt install zsh -y
+		echo "${YELLOW}Zsh is not installed.${RESET} Please install zsh first."
+		exit 1
 	fi
 	if [ -d "$ZSH" ]; then
 		echo "${YELLOW}The \$ZSH folder already exists ($ZSH).${RESET}"
 		if [ "$custom_zsh" = yes ]; then
 			cat <<EOF
-
 You ran the installer with the \$ZSH setting or the \$ZSH variable is
 exported. You have 3 options:
-
 1. Unset the ZSH variable when calling the installer:
 	 $(fmt_code "ZSH= sh install.sh")
 2. Install iZSHryel to a directory that doesn't exist yet:
 	 $(fmt_code "ZSH=path/to/new/ohmyzsh/folder sh install.sh")
 3. (Caution) If the folder doesn't contain important information,
 	 you can just remove it with $(fmt_code "rm -r $ZSH")
-
 EOF
 		else
 			echo "You'll need to remove it if you want to reinstall."
