@@ -1,4 +1,4 @@
-#!/bin/sh
+WTw#!/bin/sh
 #
 # This script should be run via wget:
 #	 sh -c "$(wget -qO- https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)"
@@ -32,6 +32,33 @@
 #	 sh -c "$(wget -qO- https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)" "" --unattended
 #
 set -e
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                             _                                            "
+echo "                            | |                                           "
+echo "                        __  | |        _  _  _                            "
+echo "        -------------- /  \_|/ \ -----/ |/ |/ |  |   |--------------------"
+echo "                       \__/ |   |_/     |  |  |_/ \_/|/                   "
+echo "                           _ _________  _   _       /|        _           "
+echo "                          (_)__  / ___|| | | |_ __  \| _  ___| |          "
+echo "                          | | / /\___ \| |_| | '__| | | |/ _ \ |          "
+echo "                          | |/ /_ ___) |  _  | |  | |_| |  __/ |          "
+echo "                          |_/____|____/|_| |_|_|   \__, |\___|_|          "
+echo "                                                   |___/                  "
+echo "                                                                          "
+echo " izryel's personalized and moddified OH-MY-ZSH fork			"
+
 custom_zsh=${ZSH:+yes}
 ZSH=${ZSH:-~/.iZSHryel}
 REPO=${REPO:-izryel/iZSHryel}
@@ -112,13 +139,13 @@ fmt_link() {
 	esac
 }
 fmt_underline() {
-	is_tty && printf '\033[4m%s\033[24m\n' "$*" || printf '%s\n' "$*"
+	is_tty && printf \033[4m%s\033[24m\n $* || printf %s\n $*
 }
 fmt_code() {
-	is_tty && printf '`\033[2m%s\033[22m`\n' "$*" || printf '`%s`\n' "$*"
+	is_tty && echo \033[2m%s\033[22m\n $* || printf %s\n $*
 }
 fmt_error() {
-	printf '%sError: %s%s\n' "$BOLD$RED" "$*" "$RESET" >&2
+	echo %sError: %s%s\n $BOLD$RED $* $RESET >&2
 }
 setup_color() {
 	if is_tty; then
@@ -293,21 +320,20 @@ EOF
 		fmt_error "chsh command unsuccessful. Change your default shell manually."
 	else
 		export SHELL="$zsh"
-		echo "${GREEN}Shell successfully changed to '$zsh'.${RESET}"
+	"
 	fi
 	echo
 }
 # shellcheck disable=SC2183	# printf string has more %s than arguments ($RAINBOW expands to multiple arguments)
-print_success() {
-	printf "%s %s %s\n" "Before you scream ${BOLD}${YELLOW}iZSHryel!${RESET} look over the" \
-		"$(fmt_code "$(fmt_link ".zshrc" "file://$HOME/.zshrc" --text)")" \
-		"file to select plugins, themes, and options."
-	printf '\n'
-	printf '%s\n' "• Follow us on Twitter: $(fmt_link @ohmyzsh https://twitter.com/ohmyzsh)"
-	printf '%s\n' "• Join our Discord community: $(fmt_link "Discord server" https://discord.gg/ohmyzsh)"
-	printf '%s\n' "• Get stickers, t-shirts, coffee mugs and more: $(fmt_link "Planet Argon Shop" https://shop.planetargon.com/collections/iZSHryel)"
-	printf '%s\n' $RESET
+
+print_startup() {
+	zsh -c $ZSH/tools/ascii/startup-art.sh
 }
+
+print_success() {
+	zsh -c $ZSH/tools/ascii/finished-art.sh
+}
+
 main() {
 	# Run as unattended if stdin is not a tty
 	if [ ! -t 0 ]; then
@@ -325,25 +351,20 @@ main() {
 	done
 	setup_color
 	if ! command_exists zsh; then
-		echo "${YELLOW}Zsh is not installed.${RESET} Please install zsh first."
+		echo ${YELLOW}Zsh is not installed.${RESET} Please install zsh first.
 		exit 1
 	fi
-	if [ -d "$ZSH" ]; then
+	if [ -d $ZSH ]; then
 		rm -rf $ZSH
 		mkdir $ZSH
 	else
 		mkdir $ZSH
 	fi
-	exit 1
-fi
+exit 1
 setup_iZSHryel
 setup_zshrc
 setup_shell
 print_success
-if [ $RUNZSH = no ]; then
-	echo "${YELLOW}Run zsh to try it out.${RESET}"
-	exit
-fi
 exec zsh -l
 }
-main "$@"
+main $@
