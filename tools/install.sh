@@ -312,11 +312,13 @@ EOF
     *) termux=false ;;
   esac
 
+
+
   if [ "$termux" != true ]; then
-  sed "/^export ZSH=/ c\\
-export ZSH=\"$ZSH\"
-" "$ZSH/templates/termux.properties" > ~/.termux-omztemp
-  mv -f ~/.termux-omztemp ~/.termux/termux.properties
+  cp -r "$ZSH/templates/termux.properties" "$HOME/.termux/termux.properties"
+
+
+
     # Test for the right location of the "shells" file
     if [ -f /etc/shells ]; then
       shells_file=/etc/shells
