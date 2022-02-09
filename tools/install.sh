@@ -32,22 +32,6 @@
 #	 sh -c "$(wget -qO- https://raw.githubusercontent.com/izryel/iZSHryel/master/tools/install.sh)" "" --unattended
 #
 set -e
-echo "                                                                          "
-echo "                                                                          "
-echo "                             _                                            "
-echo "                            | |                                           "
-echo "                        __  | |        _  _  _                            "
-echo "        -------------- /  \_|/ \ -----/ |/ |/ |  |   |--------------------"
-echo "                       \__/ |   |_/     |  |  |_/ \_/|/                   "
-echo "                           _ _________  _   _       /|        _           "
-echo "                          (_)__  / ___|| | | |_ __  \| _  ___| |          "
-echo "                          | | / /\___ \| |_| | '__| | | |/ _ \ |          "
-echo "                          | |/ /_ ___) |  _  | |  | |_| |  __/ |          "
-echo "                          |_/____|____/|_| |_|_|   \__, |\___|_|          "
-echo "                                                   |___/                  "
-echo "                                                                          "
-echo " izryel's personalized and moddified OH-MY-ZSH fork			"
-
 custom_zsh=${ZSH:+yes}
 ZSH=${ZSH:-~/.iZSHryel}
 REPO=${REPO:-izryel/iZSHryel}
@@ -92,21 +76,26 @@ supports_hyperlinks() {
 		[ "$FORCE_HYPERLINK" != 0 ]
 		return $?
 	fi
+
 	# If stdout is not a tty, it doesn't support hyperlinks
 	is_tty || return 1
+
 	# DomTerm terminal emulator (domterm.org)
 	if [ -n "$DOMTERM" ]; then
 		return 0
 	fi
+
 	# VTE-based terminals above v0.50 (Gnome Terminal, Guake, ROXTerm, etc)
 	if [ -n "$VTE_VERSION" ]; then
 		[ $VTE_VERSION -ge 5000 ]
 		return $?
 	fi
+
 	# If $TERM_PROGRAM is set, these terminals support hyperlinks
 	case "$TERM_PROGRAM" in
 	Hyper|iTerm.app|terminology|WezTerm) return 0 ;;
 	esac
+
 	# kitty supports hyperlinks
 	if [ "$TERM" = xterm-kitty ]; then
 		return 0
@@ -114,6 +103,7 @@ supports_hyperlinks() {
 	if [ -n "$WT_SESSION" ] || [ -n "$KONSOLE_VERSION" ]; then
 		return 0
 	fi
+
 	return 1
 }
 fmt_link() {
@@ -128,13 +118,14 @@ fmt_link() {
 	esac
 }
 fmt_underline() {
-	is_tty && printf \033[4m%s\033[24m\n $* || printf %s\n $*
+	is_tty && printf '\033[4m%s\033[24m\n' "$*" || printf '%s\n' "$*"
 }
 fmt_code() {
-	is_tty && echo \033[2m%s\033[22m\n $* || printf %s\n $*
+	is_tty && printf '`\033[2m%s\033[22m`\n' "$*" || printf '`%s`\n' "$*"
 }
+
 fmt_error() {
-	echo %sError: %s%s\n $BOLD$RED $* $RESET >&2
+	printf '%sError: %s%s\n' "$BOLD$RED" "$*" "$RESET" >&2
 }
 setup_color() {
 	if is_tty; then
@@ -243,15 +234,18 @@ setup_zshrc() {
 	mv -f ~/.nanorc-omztemp ~/.nanorc
 	echo
 }
+
 setup_shell() {
 	# Skip setup if the user wants or stdin is closed (not running interactively).
 	if [ "$CHSH" = no ]; then
 		return
 	fi
+
 	# If this user's login shell is already "zsh", do not attempt to switch.
 	if [ "$(basename -- "$SHELL")" = "zsh" ]; then
 		return
 	fi
+
 	# If this platform doesn't provide a "chsh" command, bail out.
 	if ! command_exists chsh; then
 		cat <<EOF
@@ -260,7 +254,9 @@ ${BLUE}Please manually change your default shell to zsh${RESET}
 EOF
 		return
 	fi
+
 	echo "${BLUE}Time to change your default shell to zsh:${RESET}"
+
 	# Prompt for user choice on changing the default login shell
 	printf '%sDo you want to change your default shell to zsh? [Y/n]%s ' \
 		"$YELLOW" "$RESET"
@@ -270,11 +266,13 @@ EOF
 		n*|N*) echo "Shell change skipped."; return ;;
 		*) echo "Invalid choice. Shell change skipped."; return ;;
 	esac
+
 	# Check if we're running on Termux
 	case "$PREFIX" in
 		*com.termux*) termux=true; zsh=zsh ;;
 		*) termux=false ;;
 	esac
+
 	if [ "$termux" != true ]; then
 		cp -r $ZSH/templates/termux.properties" $HOME/.termux-omztemp
 		mv -f ~/.termux-omztemp ~/.termux/termux.properties
@@ -287,6 +285,7 @@ EOF
 			fmt_error "could not find /etc/shells file. Change your default shell manually."
 			return
 		fi
+
 		# Get the path to the right zsh binary
 		# 1. Use the most preceding one based on $PATH, then check that it's in the shells file
 		# 2. If that fails, get a zsh path from the shells file, then check it actually exists
@@ -298,29 +297,35 @@ EOF
 			fi
 		fi
 	fi
+
 	# We're going to change the default shell, so back up the current one
 	if [ -n "$SHELL" ]; then
 		echo "$SHELL" > ~/.shell.pre-iZSHryel
 	else
 		grep "^$USERNAME:" /etc/passwd | awk -F: '{print $7}' > ~/.shell.pre-iZSHryel
 	fi
+
 	# Actually change the default shell to zsh
 	if ! chsh -s "$zsh"; then
 		fmt_error "chsh command unsuccessful. Change your default shell manually."
 	else
 		export SHELL="$zsh"
-	"
+		echo "${GREEN}Shell successfully changed to '$zsh'.${RESET}"
 	fi
+
 	echo
 }
+
 # shellcheck disable=SC2183	# printf string has more %s than arguments ($RAINBOW expands to multiple arguments)
-
-print_startup() {
-	zsh -c $ZSH/tools/ascii/startup-art.sh
-}
-
 print_success() {
-	zsh -c $ZSH/tools/ascii/finished-art.sh
+	printf "%s %s %s\n" "Before you scream ${BOLD}${YELLOW}iZSHryel!${RESET} look over the" \
+		"$(fmt_code "$(fmt_link ".zshrc" "file://$HOME/.zshrc" --text)")" \
+		"file to select plugins, themes, and options."
+	printf '\n'
+	printf '%s\n' "• Follow us on Twitter: $(fmt_link @ohmyzsh https://twitter.com/ohmyzsh)"
+	printf '%s\n' "• Join our Discord community: $(fmt_link "Discord server" https://discord.gg/ohmyzsh)"
+	printf '%s\n' "• Get stickers, t-shirts, coffee mugs and more: $(fmt_link "Planet Argon Shop" https://shop.planetargon.com/collections/iZSHryel)"
+	printf '%s\n' $RESET
 }
 
 main() {
@@ -329,6 +334,7 @@ main() {
 		RUNZSH=no
 		CHSH=no
 	fi
+
 	# Parse arguments
 	while [ $# -gt 0 ]; do
 		case $1 in
@@ -338,22 +344,48 @@ main() {
 		esac
 		shift
 	done
+
 	setup_color
+
 	if ! command_exists zsh; then
-		echo ${YELLOW}Zsh is not installed.${RESET} Please install zsh first.
+		echo "${YELLOW}Zsh is not installed.${RESET} Please install zsh first."
 		exit 1
 	fi
-	if [ -d $ZSH ]; then
-		rm -rf $ZSH
-		mkdir $ZSH
-	else
-		mkdir $ZSH
+
+	if [ -d "$ZSH" ]; then
+		echo "${YELLOW}The \$ZSH folder already exists ($ZSH).${RESET}"
+		if [ "$custom_zsh" = yes ]; then
+			cat <<EOF
+
+You ran the installer with the \$ZSH setting or the \$ZSH variable is
+exported. You have 3 options:
+
+1. Unset the ZSH variable when calling the installer:
+	 $(fmt_code "ZSH= sh install.sh")
+2. Install iZSHryel to a directory that doesn't exist yet:
+	 $(fmt_code "ZSH=path/to/new/ohmyzsh/folder sh install.sh")
+3. (Caution) If the folder doesn't contain important information,
+	 you can just remove it with $(fmt_code "rm -r $ZSH")
+
+EOF
+		else
+			echo "You'll need to remove it if you want to reinstall."
+		fi
+		exit 1
 	fi
-exit 1
-setup_iZSHryel
-setup_zshrc
-setup_shell
-print_success
-exec zsh -l
+
+	setup_iZSHryel
+	setup_zshrc
+	setup_shell
+
+	print_success
+
+	if [ $RUNZSH = no ]; then
+		echo "${YELLOW}Run zsh to try it out.${RESET}"
+		exit
+	fi
+
+	exec zsh -l
 }
-main $@
+
+main "$@"
