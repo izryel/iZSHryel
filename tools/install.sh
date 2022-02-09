@@ -183,14 +183,12 @@ setup_iZSHryel() {
 	# that this will be ignored under Cygwin by default, as Windows ACLs take
 	# precedence over umasks except for filesystems mounted with option "noacl".
 	umask g-w,o-w
-
 	echo "${BLUE}Cloning iZSHryel...${RESET}"
 
 	command_exists git || {
 		fmt_error "git is not installed"
 		exit 1
 	}
-
 	ostype=$(uname)
 	if [ -z "${ostype%CYGWIN*}" ] && git --version | grep -q msysgit; then
 		fmt_error "Windows/MSYS Git is not supported on Cygwin"
@@ -208,10 +206,8 @@ setup_iZSHryel() {
 		fmt_error "git clone of iZSHryel repo failed"
 		exit 1
 	}
-
 	echo
 }
-
 setup_zshrc() {
 	# Keep most recent old .zshrc at .zshrc.pre-iZSHryel, and older ones
 	# with datestamp of installation that moved them aside, so we never actually
@@ -234,51 +230,40 @@ setup_zshrc() {
 				exit 1
 			fi
 			mv "$OLD_ZSHRC" "${OLD_OLD_ZSHRC}"
-
 			echo "${YELLOW}Found old ~/.zshrc.pre-iZSHryel." \
-				"${GREEN}Backing up to ${OLD_OLD_ZSHRC}${RESET}"
+			"${GREEN}Backing up to ${OLD_OLD_ZSHRC}${RESET}"
 		fi
 		echo "${YELLOW}Found ~/.zshrc.${RESET} ${GREEN}Backing up to ${OLD_ZSHRC}${RESET}"
 		mv ~/.zshrc "$OLD_ZSHRC"
 	fi
-
 	echo "${GREEN}Using the iZSHryel template file and adding it to ~/.zshrc.${RESET}"
-
 	sed "/^export ZSH=/ c\\
-export ZSH=\"$ZSH\"
-" "$ZSH/templates/zshrc.zsh-template" > ~/.zshrc-omztemp
+	export ZSH=\"$ZSH\"
+	" "$ZSH/templates/zshrc.zsh-template" > ~/.zshrc-omztemp
 	mv -f ~/.zshrc-omztemp ~/.zshrc
-
 	sed "/^export ZSH=/ c\\
-export ZSH=\"$ZSH\"
-" "$ZSH/templates/env.zsh-template" > ~/.env.zshrc-omztemp
+	export ZSH=\"$ZSH\"
+	" "$ZSH/templates/env.zsh-template" > ~/.env.zshrc-omztemp
 	mv -f ~/.env.zshrc-omztemp ~/.env.zshrc
-
 	sed "/^export ZSH=/ c\\
-export ZSH=\"$ZSH\"
-" "$ZSH/templates/alias.zsh-template" > ~/.alias.zshrc-omztemp
+	export ZSH=\"$ZSH\"
+	" "$ZSH/templates/alias.zsh-template" > ~/.alias.zshrc-omztemp
 	mv -f ~/.alias.zshrc-omztemp ~/.alias.zshrc
-
 	sed "/^export ZSH=/ c\\
-export ZSH=\"$ZSH\"
-" "$ZSH/templates/nanorc.zsh-template" > ~/.nanorc-omztemp
+	export ZSH=\"$ZSH\"
+	" "$ZSH/templates/nanorc.zsh-template" > ~/.nanorc-omztemp
 	mv -f ~/.nanorc-omztemp ~/.nanorc
-
-
 	echo
 }
-
 setup_shell() {
 	# Skip setup if the user wants or stdin is closed (not running interactively).
 	if [ "$CHSH" = no ]; then
 		return
 	fi
-
 	# If this user's login shell is already "zsh", do not attempt to switch.
 	if [ "$(basename -- "$SHELL")" = "zsh" ]; then
 		return
 	fi
-
 	# If this platform doesn't provide a "chsh" command, bail out.
 	if ! command_exists chsh; then
 		cat <<EOF
@@ -287,9 +272,7 @@ ${BLUE}Please manually change your default shell to zsh${RESET}
 EOF
 		return
 	fi
-
 	echo "${BLUE}Time to change your default shell to zsh:${RESET}"
-
 	# Prompt for user choice on changing the default login shell
 	printf '%sDo you want to change your default shell to zsh? [Y/n]%s ' \
 		"$YELLOW" "$RESET"
@@ -299,7 +282,6 @@ EOF
 		n*|N*) echo "Shell change skipped."; return ;;
 		*) echo "Invalid choice. Shell change skipped."; return ;;
 	esac
-
 	# Check if we're running on Termux
 	case "$PREFIX" in
 		*com.termux*) termux=true; zsh=zsh ;;
@@ -387,19 +369,14 @@ EOF
 		fi
 		exit 1
 	fi
-
 	setup_iZSHryel
 	setup_zshrc
 	setup_shell
-
 	print_success
-
 	if [ $RUNZSH = no ]; then
 		echo "${YELLOW}Run zsh to try it out.${RESET}"
 		exit
 	fi
-
 	exec zsh -l
 }
-
 main "$@"
