@@ -324,23 +324,22 @@ EOF
 			return
 		fi
 	fi
-fi
-if [ -n "$SHELL" ]; then
-	echo "$SHELL" > ~/.shell.pre-iZSHryel
-else
-	grep "^$USERNAME:" /etc/passwd | awk -F: '{print $7}' > ~/.shell.pre-iZSHryel
-fi
-if ! chsh -s "$zsh"; then
-	fmt_error "chsh command unsuccessful. Change your default shell manually."
-else
-	export SHELL="$zsh"
-	echo "${GREEN}Shell successfully changed to '$zsh'.${RESET}"
-fi
-	echo
-}
-#shellcheck disable=SC2183	
-#printf string has more %s than arguments ($RAINBOW expands to multiple arguments)
-print_success() {
+	if [ -n "$SHELL" ]; then
+		echo "$SHELL" > ~/.shell.pre-iZSHryel
+	else
+		grep "^$USERNAME:" /etc/passwd | awk -F: '{print $7}' > ~/.shell.pre-iZSHryel
+	fi
+	if ! chsh -s "$zsh"; then
+		fmt_error "chsh command unsuccessful. Change your default shell manually."
+	else
+		export SHELL="$zsh"
+		echo "${GREEN}Shell successfully changed to '$zsh'.${RESET}"
+	fi
+		echo
+	}
+	#shellcheck disable=SC2183	
+	#printf string has more %s than arguments ($RAINBOW expands to multiple arguments)
+	print_success() {
 	printf "%s %s %s\n" "Before you scream ${BOLD}${YELLOW}iZSHryel!${RESET} look over the" \
 		"$(fmt_code "$(fmt_link ".zshrc" "file://$HOME/.zshrc" --text)")" \
 		"file to select plugins, themes, and options."
