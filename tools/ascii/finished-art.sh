@@ -1,0 +1,12 @@
+echo "                                                                          ";
+echo "                                                                          ";
+echo "       ___ __  _      _ .                                                 ";
+echo "        |   / |_)\_/ |_ |   _ _________  _   _                 _          ";
+echo "       _|_ /_ | \ |  |_ |__(_)__  / ___|| | | |_ __ _   _  ___| |         ";
+echo "                           | | / /\___ \| |_| | |__| | | |/ _ \ |         ";
+echo "    thanks to the          | |/ /_ ___) |  _  | |  | |_| |  __/ |         ";
+echo "            OH-MY-ZSH team |_/____|____/|_| |_|_|   \__, |\___|_|         ";
+echo "                 for allowing me to fork em         |___/                 ";
+echo "         (Maybe next time we can spoon before you fork me?)               ";
+echo "                                                                          ";
+echo "                                                                          ";
