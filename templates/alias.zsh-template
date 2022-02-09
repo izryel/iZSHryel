@@ -1,4 +1,4 @@
-$ZSH/termux-and-root.zsh
+$ZSH/lib/termux-and-root.zsh
 alias nanorc='nano $HOME/.nanorc'
 alias aliasrc='nano $HOME/.alias.zshrc;source ~/.alias.zshrc'
 alias envrc='nano $HOME/.env.zshrc;source ~/.env.zshrc'
