@@ -1,0 +1,4 @@
+alias su='tsu'
+alias dd='sudo dd'
+alias mount='sudo mount'
+alias umount='sudo umount'
