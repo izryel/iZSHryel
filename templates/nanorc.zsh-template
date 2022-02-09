@@ -1,25 +1,15 @@
-# my-nanorc
-set atblanks
-set autoindent
-set backup
+
 set casesensitive
 set historylog
 set linenumbers
 set locking
 set mouse
-set quickblank
 set regexp
-set saveonexit
-set softwrap
 set smarthome
-set tabsize 4
-set tabstospaces
 set unix
-
 unbind ^T all
 unbind ^G all
 unbind M-M all
-
 bind ^C cancel all
 bind ^X exit all
 bind ^S savefile all

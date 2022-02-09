@@ -1,6 +1,6 @@
 # Path to your iZSHryel installation.
-# export ZSH=$HOME/.iZSHryel
-source $HOME/.env.zshrc
+ZSH=/etc/iZSHryel/$(whoami)
+source "$HOME/.env.zshrc"
 ZSH_THEME="izryel"
 CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"
@@ -13,5 +13,5 @@ COMPLETION_WAITING_DOTS="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="mm/dd/yyyy"
 plugins=()
-source $ZSH/iZSHryel.sh
-source $HOME/.alias.zshrc
+source "$ZSH/iZSHryel.sh"
+source "$HOME/.alias.zshrc"

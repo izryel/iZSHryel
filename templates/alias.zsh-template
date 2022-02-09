@@ -3,5 +3,5 @@ alias nanorc='nano $HOME/.nanorc'
 alias aliasrc='nano $HOME/.alias.zshrc;source ~/.alias.zshrc'
 alias envrc='nano $HOME/.env.zshrc;source ~/.env.zshrc'
 alias zshrc='nano $HOME/.zshrc;source ~/.zshrc'
-alias install="apt install -y --assume-yes"
+alias install='apt install -y --assume-yes'
 alias update="apt update"
