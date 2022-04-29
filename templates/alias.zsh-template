@@ -1,7 +1,8 @@
-$ZSH/lib/termux-and-root.zsh
 alias nanorc='nano $HOME/.nanorc'
 alias aliasrc='nano $HOME/.alias.zshrc;source ~/.alias.zshrc'
 alias envrc='nano $HOME/.env.zshrc;source ~/.env.zshrc'
 alias zshrc='nano $HOME/.zshrc;source ~/.zshrc'
+alias resolvrc='cd $HOME;nano ../etc/resolv.conf;resolvconf -u'
 alias install='apt install -y --assume-yes'
 alias update="apt update"
+alias termuxrc='nano $HOME/.termux/termux.prop*;termux-reload'
